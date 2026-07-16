@@ -11,7 +11,7 @@ Live site:
 ## Projects
 
 - **Cosmic Observer** — Windows astronomy desktop app ([engboda6/cosmic-observer](https://github.com/engboda6/cosmic-observer))
-- **Data Analysis Platform** — dataset cleaning, analysis, charts, and reports (Python, Pandas, NumPy, Matplotlib, SQL)
+- **Vertical Farm Telemetry Analysis** — Python pipeline (pandas, numpy, matplotlib, openpyxl) from farm CSV to PDF report
 
 ## Local preview
 

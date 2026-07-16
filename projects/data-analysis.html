@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Analysis Platform — Abd Alrahman</title>
+    <title>Vertical Farm Telemetry Analysis — Abd Alrahman</title>
     <meta
       name="description"
-      content="Software that imports datasets, cleans data, performs statistical analysis, generates charts, and exports reports."
+      content="Python data analysis pipeline for vertical farm telemetry: clean 600 production rows, analyze nutrient channels, charts, Excel, and a 3-page PDF report."
     />
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
@@ -22,38 +22,79 @@
     <main>
       <header class="page-hero">
         <div class="section-inner">
-          <p class="crumb"><a href="../index.html">Home</a> / Projects / Data Analysis</p>
-          <h1>Data Analysis Platform</h1>
+          <p class="crumb"><a href="../index.html">Home</a> / Projects / Vertical Farm Analysis</p>
+          <h1>Vertical Farm Telemetry Analysis</h1>
           <p class="desc">
-            A software solution that imports datasets, cleans data, performs statistical analysis,
-            generates charts, and exports professional reports.
+            A pure Python data analysis system for a vertical farm. It reads a real telemetry ledger
+            with 600 production rows and turns it into a clean dataset, analysis tables, charts, and
+            a delivery-ready PDF report.
           </p>
         </div>
       </header>
 
       <section class="content-block">
         <div class="block-inner">
-          <h2>Technologies</h2>
-          <ul class="tech-list">
-            <li>Python</li>
-            <li>Pandas</li>
-            <li>NumPy</li>
-            <li>Matplotlib</li>
-            <li>SQL</li>
+          <h2>What it does</h2>
+          <p class="note" style="margin-top: 0">
+            One pipeline converts a raw farm CSV into an organized dataset, analysis outputs, charts,
+            and a portfolio-ready PDF — run end-to-end with a single command.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-block">
+        <div class="block-inner">
+          <h2>Pipeline steps</h2>
+          <ul class="feature-list">
+            <li>
+              <strong>Import &amp; clean</strong> (<code>prepare_dataset.py</code>) — reads
+              <code>vertical_farm_biomass_telemetry_ledger.csv</code>, cleans columns, parses Stack /
+              Rack / Row IDs, outputs an analysis-ready dataset
+            </li>
+            <li>
+              <strong>Analysis</strong> (<code>analysis.py</code>) — nutrient decay acceleration
+              matrix for 60 irrigation channels, weak-circulation channels, harvest-weight index per
+              crop, best nutrition balance from top yield rows
+            </li>
+            <li>
+              <strong>Charts</strong> (<code>charts.py</code>) — EC distribution, circulation vs
+              nutrient decay, matrix heatmap, harvest index plot
+            </li>
+            <li>
+              <strong>Report</strong> (<code>report.py</code>) — 3-page PDF (Basant) with summary,
+              matrix, and recommendations
+            </li>
+            <li>
+              <strong>Full run</strong> (<code>run_pipeline.py</code>) — executes every step with one
+              command
+            </li>
           </ul>
         </div>
       </section>
 
       <section class="content-block">
         <div class="block-inner">
-          <h2>Features</h2>
+          <h2>Language &amp; libraries</h2>
+          <p class="note" style="margin: 0 0 1.25rem">The entire project is written in Python only.</p>
+          <ul class="tech-list">
+            <li>Python</li>
+            <li>pandas — read, clean, aggregate</li>
+            <li>numpy — calculations &amp; normalization</li>
+            <li>matplotlib — charts + PDF</li>
+            <li>openpyxl — Excel export</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-block">
+        <div class="block-inner">
+          <h2>Outputs</h2>
           <ul class="feature-list">
-            <li>Data cleaning</li>
-            <li>Statistical analysis</li>
-            <li>Charts and graphs</li>
-            <li>Excel support</li>
-            <li>PDF reports</li>
-            <li>Dashboard</li>
+            <li>Clean structured dataset from raw telemetry CSV</li>
+            <li>Analysis tables (60 irrigation channels)</li>
+            <li>Charts: EC, circulation, heatmap, harvest index</li>
+            <li>Excel exports via openpyxl</li>
+            <li>3-page PDF report ready for delivery / portfolio</li>
           </ul>
         </div>
       </section>
@@ -64,33 +105,36 @@
           <div class="gallery">
             <figure>
               <img
-                src="../assets/images/data-analysis/dashboard.svg"
-                alt="Data Analysis Platform dashboard"
-              />
-              <figcaption>Dashboard</figcaption>
-            </figure>
-            <figure>
-              <img
                 src="../assets/images/data-analysis/cleaning.svg"
-                alt="Data Analysis Platform cleaning view"
+                alt="Dataset preparation step"
               />
-              <figcaption>Data cleaning</figcaption>
+              <figcaption>Dataset prepare &amp; clean</figcaption>
             </figure>
             <figure>
               <img
                 src="../assets/images/data-analysis/charts.svg"
-                alt="Data Analysis Platform charts"
+                alt="Analysis charts"
               />
-              <figcaption>Charts and graphs</figcaption>
+              <figcaption>EC, heatmap &amp; harvest charts</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../assets/images/data-analysis/dashboard.svg"
+                alt="Analysis tables"
+              />
+              <figcaption>Channel analysis tables</figcaption>
             </figure>
             <figure>
               <img
                 src="../assets/images/data-analysis/reports.svg"
-                alt="Data Analysis Platform reports"
+                alt="PDF report output"
               />
-              <figcaption>PDF / Excel reports</figcaption>
+              <figcaption>3-page PDF report (Basant)</figcaption>
             </figure>
           </div>
+          <p class="note">
+            Place real chart/PDF screenshots in <code>assets/images/data-analysis/</code> when ready.
+          </p>
         </div>
       </section>
 
