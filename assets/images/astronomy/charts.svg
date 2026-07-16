@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="Charts screen placeholder">
+  <rect width="960" height="600" fill="#070b14"/>
+  <rect x="80" y="100" width="800" height="400" rx="4" fill="#121c30" stroke="#94b0d6" stroke-opacity="0.22"/>
+  <polyline points="140,420 260,340 380,360 500,240 620,280 740,160" fill="none" stroke="#3db8ff" stroke-width="3"/>
+  <circle cx="140" cy="420" r="5" fill="#3db8ff"/>
+  <circle cx="260" cy="340" r="5" fill="#3db8ff"/>
+  <circle cx="380" cy="360" r="5" fill="#3db8ff"/>
+  <circle cx="500" cy="240" r="5" fill="#3db8ff"/>
+  <circle cx="620" cy="280" r="5" fill="#3db8ff"/>
+  <circle cx="740" cy="160" r="5" fill="#3db8ff"/>
+  <text x="480" y="540" text-anchor="middle" fill="#93a4c0" font-family="Segoe UI, sans-serif" font-size="22">Charts &amp; graphs</text>
+</svg>

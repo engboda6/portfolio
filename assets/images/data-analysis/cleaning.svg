@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="Data cleaning placeholder">
+  <rect width="960" height="600" fill="#070b14"/>
+  <rect x="80" y="100" width="800" height="400" rx="4" fill="#121c30" stroke="#94b0d6" stroke-opacity="0.22"/>
+  <rect x="110" y="140" width="740" height="36" rx="2" fill="#0d1526"/>
+  <rect x="110" y="190" width="740" height="36" rx="2" fill="#0d1526"/>
+  <rect x="110" y="240" width="740" height="36" rx="2" fill="#0d1526"/>
+  <rect x="110" y="290" width="740" height="36" rx="2" fill="#0d1526"/>
+  <rect x="130" y="152" width="90" height="12" rx="2" fill="#3db8ff" opacity="0.55"/>
+  <rect x="250" y="152" width="140" height="12" rx="2" fill="#93a4c0" opacity="0.4"/>
+  <text x="480" y="420" text-anchor="middle" fill="#93a4c0" font-family="Segoe UI, sans-serif" font-size="26">Data cleaning</text>
+</svg>

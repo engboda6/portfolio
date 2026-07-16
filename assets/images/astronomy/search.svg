@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="Search screen placeholder">
+  <rect width="960" height="600" fill="#070b14"/>
+  <rect x="80" y="120" width="800" height="56" rx="4" fill="#121c30" stroke="#3db8ff" stroke-opacity="0.45"/>
+  <circle cx="120" cy="148" r="12" fill="none" stroke="#3db8ff" stroke-width="2"/>
+  <line x1="129" y1="157" x2="142" y2="170" stroke="#3db8ff" stroke-width="2"/>
+  <rect x="160" y="140" width="280" height="14" rx="2" fill="#93a4c0" opacity="0.45"/>
+  <rect x="80" y="220" width="800" height="300" rx="4" fill="#0d1526" stroke="#94b0d6" stroke-opacity="0.2"/>
+  <text x="480" y="370" text-anchor="middle" fill="#93a4c0" font-family="Segoe UI, sans-serif" font-size="28">Search screen</text>
+  <text x="480" y="410" text-anchor="middle" fill="#3db8ff" font-family="Segoe UI, sans-serif" font-size="16">Replace with your screenshot</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="Reports placeholder">
+  <rect width="960" height="600" fill="#070b14"/>
+  <rect x="280" y="80" width="400" height="440" rx="4" fill="#121c30" stroke="#94b0d6" stroke-opacity="0.25"/>
+  <rect x="320" y="120" width="220" height="16" rx="2" fill="#e8eef8" opacity="0.75"/>
+  <rect x="320" y="160" width="320" height="10" rx="2" fill="#93a4c0" opacity="0.4"/>
+  <rect x="320" y="185" width="300" height="10" rx="2" fill="#93a4c0" opacity="0.35"/>
+  <rect x="320" y="230" width="320" height="120" rx="2" fill="#0d1526"/>
+  <rect x="320" y="380" width="140" height="36" rx="2" fill="#3db8ff" opacity="0.75"/>
+  <text x="480" y="555" text-anchor="middle" fill="#93a4c0" font-family="Segoe UI, sans-serif" font-size="22">PDF / Excel reports</text>
+</svg>

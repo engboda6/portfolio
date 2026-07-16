@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="Dashboard placeholder">
+  <rect width="960" height="600" fill="#070b14"/>
+  <rect x="40" y="40" width="200" height="520" rx="4" fill="#0d1526" stroke="#94b0d6" stroke-opacity="0.2"/>
+  <rect x="70" y="80" width="140" height="12" rx="2" fill="#3db8ff" opacity="0.7"/>
+  <rect x="70" y="120" width="120" height="10" rx="2" fill="#93a4c0" opacity="0.4"/>
+  <rect x="70" y="150" width="120" height="10" rx="2" fill="#93a4c0" opacity="0.4"/>
+  <rect x="270" y="40" width="300" height="160" rx="4" fill="#121c30" stroke="#94b0d6" stroke-opacity="0.22"/>
+  <rect x="590" y="40" width="330" height="160" rx="4" fill="#121c30" stroke="#94b0d6" stroke-opacity="0.22"/>
+  <rect x="270" y="220" width="650" height="340" rx="4" fill="#121c30" stroke="#94b0d6" stroke-opacity="0.22"/>
+  <text x="595" y="390" text-anchor="middle" fill="#93a4c0" font-family="Segoe UI, sans-serif" font-size="26">Dashboard</text>
+  <text x="595" y="430" text-anchor="middle" fill="#3db8ff" font-family="Segoe UI, sans-serif" font-size="15">Replace with your screenshot</text>
+</svg>
