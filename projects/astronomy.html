@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Astronomy Observation System — Abd Alrahman</title>
+    <title>Cosmic Observer — Abd Alrahman</title>
     <meta
       name="description"
-      content="AI-powered astronomy application that identifies planets, stars, and asteroids, and predicts celestial positions."
+      content="Cosmic Observer — desktop astronomy app with React, Three.js, Node.js/Express, and real NASA/JPL data, packaged with Electron."
     />
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
@@ -22,26 +22,84 @@
     <main>
       <header class="page-hero">
         <div class="section-inner">
-          <p class="crumb"><a href="../index.html">Home</a> / Projects / Astronomy</p>
-          <h1>Astronomy Observation System</h1>
+          <p class="crumb"><a href="../index.html">Home</a> / Projects / Cosmic Observer</p>
+          <h1>Cosmic Observer</h1>
           <p class="desc">
-            An AI-powered astronomy application that identifies planets, stars, and asteroids,
-            analyzes astronomical data, and predicts celestial object positions using astronomical
-            calculations.
+            A Windows desktop astronomy observatory built with JavaScript end-to-end: React +
+            Three.js for a live 3D sky, Node.js/Express for local APIs and orbital calculations, and
+            Electron for a native .exe — powered by real NASA, JPL, and CelesTrak data.
           </p>
         </div>
       </header>
 
       <section class="content-block">
         <div class="block-inner">
-          <h2>Technologies</h2>
+          <h2>Stack overview</h2>
+          <p class="section-lead" style="margin-bottom: 1.5rem">
+            Core language is JavaScript — React + Three.js on the frontend, Node.js/Express on the
+            backend, wrapped as a Windows desktop app with Electron.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-block">
+        <div class="block-inner">
+          <h2>Core languages</h2>
           <ul class="tech-list">
-            <li>Python</li>
-            <li>AI</li>
-            <li>OpenCV</li>
-            <li>NASA API</li>
-            <li>Machine Learning</li>
-            <li>SQLite</li>
+            <li>JavaScript (JSX)</li>
+            <li>HTML + CSS</li>
+            <li>PowerShell</li>
+            <li>GLSL</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-block">
+        <div class="block-inner">
+          <h2>Frontend</h2>
+          <ul class="tech-list">
+            <li>React 18</li>
+            <li>Three.js</li>
+            <li>Vite</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-block">
+        <div class="block-inner">
+          <h2>Backend</h2>
+          <ul class="tech-list">
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>astronomy-engine</li>
+            <li>OpenAI SDK</li>
+            <li>cors / dotenv</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-block">
+        <div class="block-inner">
+          <h2>Desktop packaging</h2>
+          <ul class="tech-list">
+            <li>Electron 33</li>
+            <li>electron-builder</li>
+            <li>NSIS installer (.exe)</li>
+            <li>Portable build</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-block">
+        <div class="block-inner">
+          <h2>Live data sources</h2>
+          <ul class="tech-list">
+            <li>NASA NeoWs</li>
+            <li>JPL Sentry</li>
+            <li>JPL CAD</li>
+            <li>NASA CNEOS Fireball</li>
+            <li>CelesTrak (TLE)</li>
+            <li>VizieR / CDS</li>
           </ul>
         </div>
       </section>
@@ -50,12 +108,16 @@
         <div class="block-inner">
           <h2>Features</h2>
           <ul class="feature-list">
-            <li>Planet identification</li>
-            <li>Asteroid detection</li>
-            <li>Celestial object tracking</li>
-            <li>Orbital prediction</li>
-            <li>Interactive sky visualization</li>
-            <li>Data analysis dashboard</li>
+            <li>Interactive 3D sky (stars, planets, moons, Milky Way)</li>
+            <li>Realistic sky dome shading (GLSL)</li>
+            <li>Celestial positions via astronomy-engine</li>
+            <li>Sunrise / sunset and moon phases</li>
+            <li>Near-Earth objects &amp; impact risk (NASA / JPL)</li>
+            <li>Satellite tracking with TLE (CelesTrak)</li>
+            <li>Star cluster data from VizieR / CDS</li>
+            <li>AI astronomy guide chatbot (OpenAI)</li>
+            <li>Windows location via PowerShell</li>
+            <li>Desktop app with installer and portable builds</li>
           </ul>
         </div>
       </section>
@@ -67,30 +129,30 @@
             <figure>
               <img
                 src="../assets/images/astronomy/home.svg"
-                alt="Astronomy Observation System home screen"
+                alt="Cosmic Observer home screen"
               />
-              <figcaption>Home screen</figcaption>
+              <figcaption>Home / observatory view</figcaption>
             </figure>
             <figure>
               <img
                 src="../assets/images/astronomy/search.svg"
-                alt="Astronomy Observation System search screen"
+                alt="Cosmic Observer search screen"
               />
-              <figcaption>Search screen</figcaption>
+              <figcaption>Object search</figcaption>
             </figure>
             <figure>
               <img
                 src="../assets/images/astronomy/results.svg"
-                alt="Astronomy Observation System results screen"
+                alt="Cosmic Observer 3D sky results"
               />
-              <figcaption>Results screen</figcaption>
+              <figcaption>3D sky &amp; tracking</figcaption>
             </figure>
             <figure>
               <img
                 src="../assets/images/astronomy/charts.svg"
-                alt="Astronomy Observation System charts screen"
+                alt="Cosmic Observer data dashboard"
               />
-              <figcaption>Charts & graphs</figcaption>
+              <figcaption>Data &amp; charts</figcaption>
             </figure>
           </div>
         </div>

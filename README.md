@@ -10,7 +10,7 @@ Live site:
 
 ## Projects
 
-- **Astronomy Observation System** — AI-powered astronomy app (Python, OpenCV, NASA API, ML, SQLite)
+- **Cosmic Observer** — Windows astronomy desktop app (React, Three.js, Electron, Node.js/Express, NASA/JPL APIs)
 - **Data Analysis Platform** — dataset cleaning, analysis, charts, and reports (Python, Pandas, NumPy, Matplotlib, SQL)
 
 ## Local preview
