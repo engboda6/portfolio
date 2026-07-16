@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
 
 :root {
-  --bg: #100e0c;
-  --bg-raised: #1a1714;
-  --bg-soft: #221e1a;
-  --text: #f3ebe2;
-  --text-muted: #a89f94;
-  --accent: #c4a574;
-  --accent-dim: rgba(196, 165, 116, 0.14);
-  --line: rgba(243, 235, 226, 0.12);
+  --bg: #12100e;
+  --bg-raised: #1c1916;
+  --bg-soft: #26221e;
+  --text: #f4efe8;
+  --text-muted: #a79e93;
+  --accent: #c9a86c;
+  --accent-dim: rgba(201, 168, 108, 0.12);
+  --line: rgba(244, 239, 232, 0.12);
   --max: 1040px;
   --font-display: "Cormorant Garamond", "Times New Roman", serif;
   --font-body: "IBM Plex Sans", "Segoe UI", sans-serif;
@@ -32,7 +32,6 @@ body {
   background: var(--bg);
   line-height: 1.65;
   font-weight: 400;
-  letter-spacing: 0.01em;
 }
 
 img,
@@ -53,29 +52,27 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.35rem 1.75rem;
-  background: linear-gradient(to bottom, rgba(16, 14, 12, 0.94), rgba(16, 14, 12, 0));
+  padding: 1.35rem clamp(1.25rem, 4vw, 2.5rem);
+  background: rgba(18, 16, 14, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
 }
 
 .brand {
   font-family: var(--font-display);
-  font-size: 1.55rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
 }
 
 .nav {
   display: flex;
   gap: 1.75rem;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-muted);
-}
-
-.nav a {
-  transition: color 0.2s ease;
 }
 
 .nav a:hover {
@@ -86,10 +83,11 @@ a {
   position: relative;
   min-height: 100vh;
   display: grid;
-  align-items: end;
-  padding: 7rem 1.75rem 4.5rem;
+  place-items: center;
+  padding: 7.5rem 1.5rem 5rem;
   overflow: hidden;
   isolation: isolate;
+  text-align: center;
 }
 
 .hero-bg {
@@ -97,9 +95,20 @@ a {
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(120deg, rgba(16, 14, 12, 0.2) 0%, rgba(16, 14, 12, 0.75) 55%, #100e0c 100%),
-    url("../images/astronomy/home.png") center / cover no-repeat,
-    var(--bg);
+    radial-gradient(ellipse 70% 55% at 50% 0%, rgba(201, 168, 108, 0.14), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% 80%, rgba(80, 60, 40, 0.25), transparent 55%),
+    linear-gradient(180deg, #1a1714 0%, #12100e 55%, #0e0c0a 100%);
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(244, 239, 232, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 239, 232, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black, transparent);
+  opacity: 0.5;
 }
 
 .stars {
@@ -107,15 +116,15 @@ a {
 }
 
 .hero-inner {
-  width: min(100%, var(--max));
+  width: min(100%, 720px);
   margin: 0 auto;
-  animation: fade-up 1s ease both;
+  animation: fade-up 0.9s ease both;
 }
 
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
@@ -124,46 +133,57 @@ a {
 }
 
 .hero-kicker {
-  margin: 0 0 1rem;
+  margin: 0 0 1.1rem;
   color: var(--accent);
   font-size: 0.78rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
 }
 
 .hero-brand {
   font-family: var(--font-display);
-  font-size: clamp(3.6rem, 10vw, 6.4rem);
+  font-size: clamp(3.8rem, 11vw, 6.8rem);
   font-weight: 500;
-  line-height: 0.92;
-  margin: 0 0 1.1rem;
+  line-height: 0.95;
+  margin: 0 0 1rem;
   letter-spacing: -0.02em;
 }
 
+.hero-brand::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 1px;
+  margin: 1.25rem auto 0;
+  background: var(--accent);
+}
+
 .hero-lead {
-  max-width: 32rem;
-  margin: 0 0 2.2rem;
+  max-width: 34rem;
+  margin: 1.4rem auto 2.4rem;
   color: var(--text-muted);
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 1.08rem;
+  line-height: 1.75;
 }
 
 .cta-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  justify-content: center;
+  gap: 0.8rem;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.9rem 1.4rem;
+  min-width: 8.5rem;
+  padding: 0.95rem 1.5rem;
   border-radius: 0;
   font-weight: 500;
-  font-size: 0.84rem;
-  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   border: 1px solid transparent;
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
@@ -175,7 +195,7 @@ a {
 }
 
 .btn-primary:hover {
-  background: #d4b88a;
+  background: #d8b67c;
 }
 
 .btn-ghost {
@@ -190,7 +210,7 @@ a {
 }
 
 .section {
-  padding: 5.5rem 1.75rem;
+  padding: 5.5rem clamp(1.25rem, 4vw, 2.5rem);
 }
 
 .section-inner {
@@ -208,7 +228,7 @@ a {
 .section-lead {
   margin: 0 0 2.75rem;
   color: var(--text-muted);
-  max-width: 30rem;
+  max-width: 32rem;
   font-size: 1rem;
 }
 
@@ -219,8 +239,7 @@ a {
 
 @media (min-width: 820px) {
   .projects-grid {
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 1.25rem;
+    grid-template-columns: 1.1fr 0.9fr;
   }
 }
 
@@ -229,14 +248,13 @@ a {
   position: relative;
   min-height: 340px;
   border: 1px solid var(--line);
-  border-radius: 0;
   overflow: hidden;
   background: var(--bg-raised);
   transition: border-color 0.25s ease;
 }
 
 .project-link:hover {
-  border-color: rgba(196, 165, 116, 0.45);
+  border-color: rgba(201, 168, 108, 0.45);
 }
 
 .project-visual {
@@ -275,7 +293,8 @@ a {
   justify-content: flex-end;
   min-height: 340px;
   padding: 1.6rem 1.5rem;
-  background: linear-gradient(to top, rgba(16, 14, 12, 0.96) 18%, rgba(16, 14, 12, 0.15) 100%);
+  background: linear-gradient(to top, rgba(18, 16, 14, 0.97) 18%, rgba(18, 16, 14, 0.15) 100%);
+  text-align: left;
 }
 
 .project-body h3 {
@@ -315,7 +334,6 @@ a {
 .contact-links a {
   color: var(--accent);
   border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
 }
 
 .contact-links a:hover {
@@ -323,18 +341,16 @@ a {
 }
 
 .site-footer {
-  padding: 1.4rem 1.75rem;
+  padding: 1.4rem;
   text-align: center;
   color: var(--text-muted);
   font-size: 0.8rem;
-  letter-spacing: 0.04em;
   border-top: 1px solid var(--line);
 }
 
 .page-hero {
-  padding: 8rem 1.75rem 3.25rem;
-  background:
-    linear-gradient(180deg, #1a1714 0%, var(--bg) 100%);
+  padding: 8rem clamp(1.25rem, 4vw, 2.5rem) 3.25rem;
+  background: linear-gradient(180deg, #1a1714 0%, var(--bg) 100%);
   border-bottom: 1px solid var(--line);
 }
 
@@ -366,20 +382,19 @@ a {
 }
 
 .page-hero .cta-row {
-  margin-top: 0.25rem;
+  justify-content: flex-start;
 }
 
 .repo-card {
   display: block;
   padding: 1.35rem 1.4rem;
   border: 1px solid var(--line);
-  border-radius: 0;
   background: var(--bg-raised);
   transition: border-color 0.2s ease;
 }
 
 .repo-card:hover {
-  border-color: rgba(196, 165, 116, 0.45);
+  border-color: rgba(201, 168, 108, 0.45);
 }
 
 .repo-card strong {
@@ -388,7 +403,6 @@ a {
   font-size: 1.45rem;
   font-weight: 500;
   margin-bottom: 0.35rem;
-  color: var(--text);
 }
 
 .repo-card span {
@@ -415,13 +429,13 @@ a.link:hover {
   text-decoration: underline;
 }
 
-.gallery img[src$=".png"] {
+.gallery img[src*=".png"] {
   object-fit: contain;
   background: #f7f4ef;
 }
 
 .content-block {
-  padding: 3.25rem 1.75rem 0;
+  padding: 3.25rem clamp(1.25rem, 4vw, 2.5rem) 0;
 }
 
 .content-block:last-of-type {
@@ -453,12 +467,10 @@ a.link:hover {
 .tech-list li {
   padding: 0.4rem 0.75rem;
   border: 1px solid var(--line);
-  border-radius: 0;
   background: transparent;
   color: var(--text-muted);
   font-size: 0.84rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
 }
 
 .feature-list {
@@ -504,13 +516,12 @@ a.link:hover {
 .gallery figure {
   margin: 0;
   border: 1px solid var(--line);
-  border-radius: 0;
   overflow: hidden;
   background: var(--bg-raised);
 }
 
 .gallery figure:hover {
-  border-color: rgba(196, 165, 116, 0.4);
+  border-color: rgba(201, 168, 108, 0.4);
 }
 
 .gallery img {
@@ -525,12 +536,10 @@ a.link:hover {
   font-size: 0.85rem;
   color: var(--text-muted);
   border-top: 1px solid var(--line);
-  letter-spacing: 0.02em;
 }
 
 .demo-box {
   border: 1px solid var(--line);
-  border-radius: 0;
   background: var(--bg-raised);
   overflow: hidden;
 }
