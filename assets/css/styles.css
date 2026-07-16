@@ -412,6 +412,22 @@ a {
   max-width: 42rem;
 }
 
+.note a,
+a.link {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.note a:hover,
+a.link:hover {
+  text-decoration: underline;
+}
+
+.gallery img[src$=".png"] {
+  object-fit: contain;
+  background: #fff;
+}
+
 .content-block {
   padding: 3rem 1.5rem 0;
 }
