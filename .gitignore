@@ -1,0 +1,5 @@
+Recording *.mp4
+*.mp4
+!assets/videos/*.mp4
+.DS_Store
+Thumbs.db
