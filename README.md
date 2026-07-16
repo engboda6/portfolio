@@ -12,6 +12,7 @@ Live site:
 
 - **Cosmic Observer** — Windows astronomy desktop app ([engboda6/cosmic-observer](https://github.com/engboda6/cosmic-observer))
 - **Vertical Farm Telemetry Analysis** — Python pipeline (pandas, numpy, matplotlib, openpyxl) from farm CSV to PDF report
+- **Home Repair Loyalty Analysis** — surveys & bundles from 2,000 marketing rows; dark 5-page client PDF
 
 ## Local preview
 

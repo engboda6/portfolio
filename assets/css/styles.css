@@ -241,6 +241,16 @@ a {
   .projects-grid {
     grid-template-columns: 1.1fr 0.9fr;
   }
+
+  .projects-grid.projects-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 819px) {
+  .projects-grid.projects-grid-3 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-link {
@@ -431,7 +441,7 @@ a.link:hover {
 
 .gallery img[src*=".png"] {
   object-fit: contain;
-  background: #f7f4ef;
+  background: #181818;
 }
 
 .content-block {

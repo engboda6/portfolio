@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Repair Loyalty Analysis — Abd Alrahman</title>
+    <meta
+      name="description"
+      content="Home-repair loyalty analysis from 2,000 marketing records — surveys, tiered bundles, and a dark 5-page client PDF by Eng: Abd Alrahman Ahmed."
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=5" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html">Abd Alrahman</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../index.html#projects">Work</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <header class="page-hero">
+        <div class="section-inner">
+          <p class="crumb"><a href="../index.html">Home</a> / Projects / Home Repair Loyalty</p>
+          <h1>Home Repair Loyalty Analysis</h1>
+          <p class="desc">
+            A home-repair loyalty project focused on post-service surveys and tiered service bundles,
+            built from real marketing data in <code>Data.xlsx</code>. Author:
+            <strong>Eng: Abd Alrahman Ahmed</strong>.
+          </p>
+          <div class="cta-row">
+            <a
+              class="btn btn-primary"
+              href="../Home-Repair-Loyalty-Analysis.pdf?v=1"
+              target="_blank"
+              rel="noopener"
+              >Open PDF</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <section class="content-block">
+        <div class="block-inner">
+          <h2>Project summary</h2>
+          <p class="note" style="margin-top: 0">
+            Goal: help a home-repair business grow returning customers through surveys after every
+            completed job and tiered service bundles (Standard / Seasonal / Premium). Final
+            deliverable: a dark visual report exported as a fully black 5-page PDF with no white
+            margins.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-block">
+        <div class="block-inner">
+          <h2>Key findings</h2>
+          <ul class="feature-list">
+            <li>2,000 clean rows · ~$1.56M revenue · 3.02x ROAS · 49.4% returning customers</li>
+            <li>Email has the strongest retention (51% returning)</li>
+            <li>Referral × Premium is the strongest loyalty pair (55.6%)</li>
+            <li>Standard has the highest average ticket but the lowest return rate → survey priority</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-block">
+        <div class="block-inner">
+          <h2>How it was built</h2>
+          <ul class="feature-list">
+            <li>Inspected <code>Data.xlsx</code> with Python + openpyxl</li>
+            <li>Loyalty metrics by month, channel, region, and service type</li>
+            <li>Cursor Canvas board (<code>home-repair-loyalty.canvas.tsx</code>)</li>
+            <li>Standalone dark HTML report with SVG charts</li>
+            <li>Chrome Headless export → fully black 5-page PDF</li>
+            <li>PyMuPDF page PNGs for portfolio / GitHub preview</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-block">
+        <div class="block-inner">
+          <h2>Client recommendations</h2>
+          <ul class="feature-list">
+            <li>Post-service surveys within 24 hours of job completion</li>
+            <li>Priority: Standard jobs and East region</li>
+            <li>Score ≤3 → callback · Score ≥4 → one-click bundle offer</li>
+            <li><strong>Care Plus</strong> — two seasonal checkups after a Standard repair</li>
+            <li><strong>Premium Shield</strong> — annual plan for Referral / returning Premium</li>
+            <li><strong>Seasonal Autopilot</strong> — email reminder + pre-booked Seasonal visit</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-block">
+        <div class="block-inner">
+          <h2>Tech stack</h2>
+          <ul class="tech-list">
+            <li>Python</li>
+            <li>openpyxl</li>
+            <li>PyMuPDF</li>
+            <li>Cursor Canvas</li>
+            <li>HTML / CSS / SVG</li>
+            <li>Chrome Headless</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-block">
+        <div class="block-inner">
+          <h2>PDF page previews</h2>
+          <p class="note" style="margin: 0 0 1.25rem">
+            Pages from <strong>Home-Repair-Loyalty-Analysis.pdf</strong> — Eng: Abd Alrahman Ahmed.
+          </p>
+          <div class="gallery">
+            <figure>
+              <img
+                src="../assets/images/home-repair/page-01.png?v=1"
+                alt="Home Repair Loyalty Analysis PDF page 1"
+              />
+              <figcaption>Page 1</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../assets/images/home-repair/page-02.png?v=1"
+                alt="Home Repair Loyalty Analysis PDF page 2"
+              />
+              <figcaption>Page 2</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../assets/images/home-repair/page-03.png?v=1"
+                alt="Home Repair Loyalty Analysis PDF page 3"
+              />
+              <figcaption>Page 3</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../assets/images/home-repair/page-04.png?v=1"
+                alt="Home Repair Loyalty Analysis PDF page 4"
+              />
+              <figcaption>Page 4</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../assets/images/home-repair/page-05.png?v=1"
+                alt="Home Repair Loyalty Analysis PDF page 5"
+              />
+              <figcaption>Page 5</figcaption>
+            </figure>
+          </div>
+          <div class="back-row cta-row">
+            <a class="btn btn-ghost" href="../index.html#projects">← Back to work</a>
+            <a
+              class="btn btn-primary"
+              href="../Home-Repair-Loyalty-Analysis.pdf?v=1"
+              target="_blank"
+              rel="noopener"
+              >Download PDF</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Abd Alrahman Ahmed Mousa Mohamed</p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
