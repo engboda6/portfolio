@@ -468,6 +468,16 @@ a {
   .gallery {
     grid-template-columns: 1fr 1fr;
   }
+
+  .gallery.gallery-single {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gallery.gallery-single img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .gallery figure {
