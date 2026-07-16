@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -23,9 +23,9 @@
       body {
         margin: 0;
         padding: 0;
-        background: #100e0c;
-        color: #f3ebe2;
-        font-family: "IBM Plex Sans", sans-serif;
+        background: #fff;
+        color: #1a1a1a;
+        font-family: "Source Sans 3", "Segoe UI", sans-serif;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
@@ -33,12 +33,12 @@
       .page {
         width: 210mm;
         height: 297mm;
-        padding: 16mm 18mm;
+        padding: 14mm 16mm 16mm;
         page-break-after: always;
         break-after: page;
         position: relative;
         overflow: hidden;
-        background: linear-gradient(165deg, #1a1714 0%, #100e0c 60%, #0c0b0a 100%);
+        background: #fff;
       }
 
       .page:last-child {
@@ -49,47 +49,41 @@
       h1,
       h2,
       h3 {
-        font-family: "Cormorant Garamond", Georgia, serif;
-        font-weight: 500;
+        font-family: "Libre Baskerville", Georgia, serif;
+        font-weight: 700;
         margin: 0;
+        color: #111;
       }
 
       .eyebrow {
-        color: #c4a574;
-        font-size: 9.5pt;
-        font-weight: 500;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-      }
-
-      .muted {
-        color: #a89f94;
-      }
-
-      .tag {
-        display: inline-block;
-        padding: 4px 9px;
-        border: 1px solid rgba(243, 235, 226, 0.14);
-        background: transparent;
+        color: #3d4f63;
         font-size: 9pt;
-        color: #a89f94;
-        margin: 0 5px 6px 0;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin: 0 0 10px;
+      }
+
+      .rule {
+        height: 1px;
+        background: #d8dee6;
+        border: 0;
+        margin: 0 0 12px;
       }
 
       .cover {
         display: grid;
-        grid-template-columns: 72mm 1fr;
-        gap: 12mm;
-        height: 100%;
+        grid-template-columns: 68mm 1fr;
+        gap: 11mm;
         align-items: start;
       }
 
       .photo-wrap {
-        border: 1px solid rgba(243, 235, 226, 0.14);
+        width: 100%;
+        height: 92mm;
         overflow: hidden;
-        background: #1a1714;
-        height: 105mm;
+        border: 1px solid #d8dee6;
+        background: #f4f6f8;
       }
 
       .photo-wrap img {
@@ -100,244 +94,283 @@
         display: block;
       }
 
-      .cover-main h1 {
-        font-size: 27pt;
-        line-height: 1.08;
+      .side-block {
+        margin-top: 12px;
+        border: 1px solid #d8dee6;
+        padding: 10px 11px;
+        background: #fafbfc;
+      }
+
+      .side-block h2 {
+        font-size: 12.5pt;
         margin-bottom: 8px;
+        font-weight: 700;
       }
 
-      .cover-main .role {
-        font-size: 11.5pt;
-        color: #a89f94;
-        margin-bottom: 14px;
-      }
-
-      .info-list {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 16px;
-      }
-
-      .info-list li {
-        display: flex;
-        gap: 10px;
-        padding: 7px 0;
-        border-bottom: 1px solid rgba(243, 235, 226, 0.1);
-        font-size: 10.5pt;
-      }
-
-      .info-list strong {
-        min-width: 38mm;
-        color: #c4a574;
-        font-weight: 600;
-      }
-
-      .intro-box {
-        margin-top: 10px;
-        padding: 12px 14px;
-        border-left: 1px solid #c4a574;
-        background: rgba(26, 23, 20, 0.8);
-        font-size: 10.5pt;
-        line-height: 1.55;
-        color: #a89f94;
-      }
-
-      .works-side {
-        margin-top: 14px;
-      }
-
-      .works-side h2 {
-        font-size: 16pt;
-        margin-bottom: 8px;
-      }
-
-      .work-item {
-        padding: 10px 12px;
-        margin-bottom: 8px;
-        border: 1px solid rgba(243, 235, 226, 0.12);
-        background: rgba(26, 23, 20, 0.7);
+      .work-item + .work-item {
+        margin-top: 8px;
+        padding-top: 8px;
+        border-top: 1px solid #e5e9ef;
       }
 
       .work-item h3 {
-        font-size: 13pt;
-        margin-bottom: 4px;
+        font-size: 10.5pt;
+        margin-bottom: 3px;
+        font-family: "Source Sans 3", sans-serif;
+        font-weight: 700;
       }
 
       .work-item p {
         margin: 0;
-        font-size: 9.5pt;
-        color: #a89f94;
-        line-height: 1.45;
-      }
-
-      .page-foot {
-        position: absolute;
-        left: 18mm;
-        right: 18mm;
-        bottom: 10mm;
-        display: flex;
-        justify-content: space-between;
         font-size: 9pt;
-        color: #a89f94;
-        border-top: 1px solid rgba(243, 235, 226, 0.1);
-        padding-top: 6px;
+        color: #555;
+        line-height: 1.4;
       }
 
-      .page-title {
-        font-size: 26pt;
+      .name {
+        font-size: 20pt;
+        line-height: 1.2;
         margin-bottom: 6px;
       }
 
-      .lead {
-        font-size: 11pt;
-        color: #a89f94;
-        line-height: 1.55;
-        max-width: 170mm;
+      .role {
         margin: 0 0 12px;
+        color: #3d4f63;
+        font-size: 11pt;
+        font-weight: 600;
+      }
+
+      .info-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 12px;
+        font-size: 10pt;
+      }
+
+      .info-table th {
+        text-align: left;
+        width: 38mm;
+        padding: 6px 0;
+        color: #3d4f63;
+        font-weight: 600;
+        border-bottom: 1px solid #e5e9ef;
+        vertical-align: top;
+      }
+
+      .info-table td {
+        padding: 6px 0;
+        border-bottom: 1px solid #e5e9ef;
+        color: #222;
+      }
+
+      .summary {
+        margin-top: 4px;
+        padding: 10px 12px;
+        border-left: 3px solid #3d4f63;
+        background: #f5f7fa;
+        font-size: 10pt;
+        line-height: 1.5;
+        color: #444;
+      }
+
+      .page-title {
+        font-size: 18pt;
+        margin: 0 0 6px;
+      }
+
+      .lead {
+        margin: 0 0 10px;
+        font-size: 10.5pt;
+        line-height: 1.5;
+        color: #444;
       }
 
       .shot {
         width: 100%;
-        max-height: 95mm;
+        max-height: 88mm;
         object-fit: cover;
         object-position: top center;
-        border: 1px solid rgba(243, 235, 226, 0.12);
-        margin: 8px 0 12px;
-        background: #1a1714;
+        border: 1px solid #d8dee6;
+        margin: 6px 0 12px;
+        background: #f4f6f8;
       }
 
       .two-col {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 10mm;
+        gap: 8mm;
+      }
+
+      .panel {
+        border: 1px solid #d8dee6;
+        padding: 10px 12px;
+        background: #fafbfc;
       }
 
       .section-label {
-        font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 15pt;
-        margin: 0 0 8px;
+        font-family: "Libre Baskerville", Georgia, serif;
+        font-size: 12pt;
+        margin: 0 0 7px;
       }
 
       ul.clean {
         margin: 0;
-        padding-left: 16px;
-        color: #a89f94;
-        font-size: 10pt;
-        line-height: 1.55;
+        padding-left: 15px;
+        color: #444;
+        font-size: 9.5pt;
+        line-height: 1.45;
       }
 
       ul.clean li {
-        margin-bottom: 5px;
+        margin-bottom: 4px;
       }
 
-      .panel {
-        border: 1px solid rgba(243, 235, 226, 0.12);
-        background: rgba(26, 23, 20, 0.75);
-        padding: 12px 14px;
+      .tag {
+        display: inline-block;
+        padding: 3px 8px;
+        margin: 0 4px 5px 0;
+        border: 1px solid #d0d7e0;
+        background: #f3f6f9;
+        color: #334155;
+        font-size: 8.5pt;
+        font-weight: 600;
       }
 
       .pipeline {
         counter-reset: step;
         list-style: none;
-        padding: 0;
         margin: 0;
+        padding: 0;
       }
 
       .pipeline li {
         counter-increment: step;
         position: relative;
-        padding: 10px 12px 10px 42px;
-        margin-bottom: 8px;
-        border: 1px solid rgba(243, 235, 226, 0.1);
-        background: rgba(26, 23, 20, 0.7);
-        font-size: 10pt;
-        color: #a89f94;
-        line-height: 1.45;
+        padding: 8px 10px 8px 36px;
+        margin-bottom: 6px;
+        border: 1px solid #d8dee6;
+        background: #fafbfc;
+        font-size: 9.5pt;
+        color: #444;
+        line-height: 1.4;
       }
 
       .pipeline li::before {
         content: counter(step);
         position: absolute;
-        left: 10px;
-        top: 10px;
-        width: 22px;
-        height: 22px;
-        background: #c4a574;
-        color: #161310;
+        left: 9px;
+        top: 8px;
+        width: 18px;
+        height: 18px;
+        background: #3d4f63;
+        color: #fff;
+        font-size: 9pt;
         font-weight: 700;
-        font-size: 10pt;
         display: grid;
         place-items: center;
       }
 
       .pipeline strong {
-        color: #f3ebe2;
-      }
-
-      .link {
-        color: #c4a574;
-        word-break: break-all;
+        color: #111;
       }
 
       .closing {
-        margin-top: 14px;
-        padding: 14px;
-        border: 1px solid rgba(196, 165, 116, 0.35);
-        background: rgba(196, 165, 116, 0.08);
+        margin-top: 12px;
+        border: 1px solid #d8dee6;
+        padding: 12px 14px;
+        background: #f5f7fa;
       }
 
       .closing h2 {
-        font-size: 16pt;
+        font-size: 13pt;
         margin-bottom: 6px;
       }
 
       .closing p {
         margin: 0;
-        color: #a89f94;
-        font-size: 10.5pt;
+        font-size: 10pt;
+        color: #444;
         line-height: 1.5;
+      }
+
+      .page-foot {
+        position: absolute;
+        left: 16mm;
+        right: 16mm;
+        bottom: 9mm;
+        display: flex;
+        justify-content: space-between;
+        font-size: 8.5pt;
+        color: #777;
+        border-top: 1px solid #e5e9ef;
+        padding-top: 5px;
+      }
+
+      a {
+        color: #27476b;
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
+    <!-- 1 -->
     <section class="page">
-      <p class="eyebrow">Portfolio</p>
+      <p class="eyebrow">Professional Portfolio</p>
+      <hr class="rule" />
       <div class="cover">
         <aside>
           <div class="photo-wrap">
             <img src="assets/images/profile.png" alt="Abd Alrahman Ahmed Mousa Mohamed" />
           </div>
-          <div class="works-side">
-            <h2>Work</h2>
+          <div class="side-block">
+            <h2>Projects</h2>
             <div class="work-item">
               <h3>1. Cosmic Observer</h3>
               <p>Windows astronomy desktop app — 3D sky, NASA data, AI tutor.</p>
             </div>
             <div class="work-item">
               <h3>2. Vertical Farm Analysis</h3>
-              <p>Python pipeline — farm telemetry to charts &amp; PDF report.</p>
+              <p>Python pipeline — farm telemetry to charts and PDF report.</p>
             </div>
           </div>
         </aside>
-        <div class="cover-main">
-          <h1>Abd Alrahman Ahmed Mousa Mohamed</h1>
+        <div>
+          <h1 class="name">Abd Alrahman Ahmed Mousa Mohamed</h1>
           <p class="role">Computer Science · Software Developer</p>
-          <ul class="info-list">
-            <li><strong>Phone</strong><span>01029646085</span></li>
-            <li><strong>Date of birth</strong><span>6 / 6 / 2004</span></li>
-            <li><strong>Age</strong><span>22</span></li>
-            <li><strong>Education</strong><span>Computer Science</span></li>
-            <li>
-              <strong>GitHub</strong><span class="link">github.com/engboda6</span>
-            </li>
-            <li>
-              <strong>Portfolio</strong
-              ><span class="link">engboda6.github.io/portfolio</span>
-            </li>
-          </ul>
-          <div class="intro-box">
-            I design and ship desktop applications and data pipelines with concrete deliverables:
-            working demos, screenshots, and reports clients can open and review.
+          <table class="info-table">
+            <tr>
+              <th>Phone</th>
+              <td>01029646085</td>
+            </tr>
+            <tr>
+              <th>Date of birth</th>
+              <td>6 / 6 / 2004</td>
+            </tr>
+            <tr>
+              <th>Age</th>
+              <td>22</td>
+            </tr>
+            <tr>
+              <th>Education</th>
+              <td>Computer Science</td>
+            </tr>
+            <tr>
+              <th>GitHub</th>
+              <td>github.com/engboda6</td>
+            </tr>
+            <tr>
+              <th>Portfolio</th>
+              <td>engboda6.github.io/portfolio</td>
+            </tr>
+            <tr>
+              <th>Email</th>
+              <td>abdalrahmanahmedmousa@gmail.com</td>
+            </tr>
+          </table>
+          <div class="summary">
+            Software developer focused on desktop applications and data analysis pipelines. Work is
+            delivered with runnable demos, screenshots, and client-ready reports rather than slides
+            alone.
           </div>
         </div>
       </div>
@@ -347,40 +380,34 @@
       </div>
     </section>
 
+    <!-- 2 -->
     <section class="page">
       <p class="eyebrow">Project 01</p>
       <h1 class="page-title">Cosmic Observer</h1>
       <p class="lead">
-        A Windows desktop astronomy application with an interactive 3D sky, near-Earth object
-        tracking, orbital debris, a dark-matter lensing research module, and an AI astronomy tutor —
-        packaged as a native .exe.
+        Windows desktop astronomy application with an interactive 3D sky, near-Earth object tracking,
+        orbital debris monitoring, a dark-matter research module, and an AI astronomy tutor. Shipped
+        as a native Windows installer and portable executable.
       </p>
-      <img
-        class="shot"
-        src="assets/images/astronomy/home.png"
-        alt="Cosmic Observer home screen"
-      />
+      <img class="shot" src="assets/images/astronomy/home.png" alt="Cosmic Observer" />
       <div class="two-col">
         <div class="panel">
-          <h2 class="section-label">What you see</h2>
+          <h2 class="section-label">Capabilities</h2>
           <ul class="clean">
-            <li>Live 3D sky from GPS / manual location</li>
-            <li>Visible satellites, planets, and bright stars</li>
+            <li>Live 3D sky from GPS or manual location</li>
+            <li>Satellites, planets, and bright stars list</li>
             <li>Sun / Moon status and sky events</li>
-            <li>Tabs: Sky, Events, NEO, Sats, Dark, Guide</li>
-            <li>Bilingual interface (Arabic + English)</li>
+            <li>Modules: Sky, Events, NEO, Sats, Dark, Guide</li>
+            <li>Arabic and English interface</li>
           </ul>
         </div>
         <div class="panel">
-          <h2 class="section-label">Repository</h2>
+          <h2 class="section-label">Links</h2>
           <ul class="clean">
-            <li>
-              GitHub:<br />
-              <span class="link">github.com/engboda6/cosmic-observer</span>
-            </li>
+            <li>github.com/engboda6/cosmic-observer</li>
             <li>License: MIT</li>
-            <li>Platform: Windows .exe</li>
-            <li>Demo video on the portfolio site</li>
+            <li>Platform: Windows (.exe)</li>
+            <li>Demo video available on portfolio site</li>
           </ul>
         </div>
       </div>
@@ -390,41 +417,41 @@
       </div>
     </section>
 
+    <!-- 3 -->
     <section class="page">
-      <p class="eyebrow">Project 01 · Stack</p>
-      <h1 class="page-title">Cosmic Observer — Technical Detail</h1>
+      <p class="eyebrow">Project 01 · Technical Profile</p>
+      <h1 class="page-title">Cosmic Observer — Stack &amp; Features</h1>
       <p class="lead">
-        JavaScript end to end: React and Three.js for the interface and sky, Node.js/Express for
-        local APIs, Electron for the Windows shell.
+        Built with JavaScript throughout: React and Three.js for the interface and sky rendering,
+        Node.js/Express for local APIs and orbital calculations, Electron for desktop packaging.
       </p>
-
-      <h2 class="section-label">Tech stack</h2>
+      <h2 class="section-label">Technologies</h2>
       <p style="margin: 0 0 12px">
         <span class="tag">JavaScript</span>
         <span class="tag">React 18</span>
         <span class="tag">Three.js</span>
         <span class="tag">Vite</span>
-        <span class="tag">Node.js / Express</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Express</span>
         <span class="tag">astronomy-engine</span>
         <span class="tag">OpenAI SDK</span>
         <span class="tag">Electron 33</span>
         <span class="tag">GLSL</span>
         <span class="tag">PowerShell</span>
       </p>
-
-      <div class="two-col" style="margin-top: 8px">
-        <div>
-          <h2 class="section-label">Highlights</h2>
+      <div class="two-col">
+        <div class="panel">
+          <h2 class="section-label">Features</h2>
           <ul class="clean">
-            <li><strong>3D Sky</strong> — stars, planets, Sun, Moon</li>
-            <li><strong>Sky Events</strong> — sunrise/sunset, moon phases</li>
-            <li><strong>NEO Tracking</strong> — NASA NeoWs</li>
-            <li><strong>Orbital Debris</strong> — CelesTrak TLE</li>
-            <li><strong>Dark Matter</strong> — research-style lensing maps</li>
-            <li><strong>AI Tutor</strong> — OpenAI chat (optional key)</li>
+            <li>Interactive 3D celestial sphere</li>
+            <li>Sunrise/sunset and moon phases</li>
+            <li>NASA NeoWs near-Earth object tracking</li>
+            <li>CelesTrak orbital debris / TLE</li>
+            <li>Dark-matter lensing research views</li>
+            <li>Optional OpenAI astronomy tutor</li>
           </ul>
         </div>
-        <div>
+        <div class="panel">
           <h2 class="section-label">Data sources</h2>
           <ul class="clean">
             <li>NASA NeoWs</li>
@@ -433,11 +460,11 @@
             <li>CelesTrak (TLE)</li>
             <li>VizieR / CDS</li>
           </ul>
-          <h2 class="section-label" style="margin-top: 14px">Architecture</h2>
+          <h2 class="section-label" style="margin-top: 10px">Structure</h2>
           <ul class="clean">
-            <li><code>electron/</code> — main + preload</li>
-            <li><code>server/</code> — APIs</li>
-            <li><code>src/</code> — React + Three.js</li>
+            <li><code>electron/</code> — desktop shell</li>
+            <li><code>server/</code> — local APIs</li>
+            <li><code>src/</code> — React UI + Three.js</li>
           </ul>
         </div>
       </div>
@@ -447,36 +474,32 @@
       </div>
     </section>
 
+    <!-- 4 -->
     <section class="page">
       <p class="eyebrow">Project 02</p>
       <h1 class="page-title">Vertical Farm Telemetry Analysis</h1>
       <p class="lead">
-        A Python analysis system for a vertical farm. Reads a real telemetry ledger with 600
-        production rows and produces a clean dataset, analysis tables, charts, Excel exports, and a
-        delivery-ready PDF report.
+        Pure Python analysis system for vertical-farm telemetry. Processes 600 production rows into a
+        clean dataset, channel-level analysis, charts, Excel exports, and a three-page PDF report.
       </p>
-
       <h2 class="section-label">Pipeline</h2>
       <ol class="pipeline">
         <li>
-          <strong>Import &amp; clean — prepare_dataset.py</strong><br />
-          Reads the telemetry CSV, cleans columns, parses Stack / Rack / Row IDs.
+          <strong>prepare_dataset.py</strong> — import and clean
+          <code>vertical_farm_biomass_telemetry_ledger.csv</code>; parse Stack / Rack / Row IDs.
         </li>
         <li>
-          <strong>Analysis — analysis.py</strong><br />
-          Nutrient decay matrix for 60 channels, weak circulation, harvest index, feeding balances.
+          <strong>analysis.py</strong> — nutrient decay matrix for 60 irrigation channels; weak
+          circulation; harvest-weight index; optimal feeding balances.
         </li>
         <li>
-          <strong>Charts — charts.py</strong><br />
-          EC distribution, circulation vs decay, heatmap, harvest index.
+          <strong>charts.py</strong> — EC distribution, circulation vs decay, heatmap, harvest index.
         </li>
         <li>
-          <strong>Report — report.py</strong><br />
-          Three-page PDF by Abd Alrahman Ahmed: summary, matrix, recommendations.
+          <strong>report.py</strong> — three-page PDF prepared by Abd Alrahman Ahmed.
         </li>
         <li>
-          <strong>Full run — run_pipeline.py</strong><br />
-          Executes every step with one command.
+          <strong>run_pipeline.py</strong> — runs the full workflow in one command.
         </li>
       </ol>
       <div class="page-foot">
@@ -485,20 +508,21 @@
       </div>
     </section>
 
+    <!-- 5 -->
     <section class="page">
       <p class="eyebrow">Project 02 · Delivery</p>
-      <h1 class="page-title">Vertical Farm — Stack &amp; Contact</h1>
+      <h1 class="page-title">Libraries, Outputs &amp; Contact</h1>
       <p class="lead">
-        Language: Python only. Raw farm CSV → structured dataset, analysis tables, charts, and PDF.
+        The project is written entirely in Python and converts a raw farm CSV into analysis tables,
+        visualizations, and a report suitable for client delivery.
       </p>
-
       <div class="two-col">
         <div class="panel">
           <h2 class="section-label">Libraries</h2>
           <ul class="clean">
-            <li><strong>pandas</strong> — read, clean, aggregate</li>
-            <li><strong>numpy</strong> — calculations</li>
-            <li><strong>matplotlib</strong> — charts + PDF</li>
+            <li><strong>pandas</strong> — data cleaning and aggregation</li>
+            <li><strong>numpy</strong> — numerical calculations</li>
+            <li><strong>matplotlib</strong> — charts and PDF figures</li>
             <li><strong>openpyxl</strong> — Excel export</li>
           </ul>
         </div>
@@ -506,27 +530,25 @@
           <h2 class="section-label">Deliverables</h2>
           <ul class="clean">
             <li>Clean structured dataset</li>
-            <li>Analysis for 60 irrigation channels</li>
-            <li>Charts and Excel files</li>
-            <li>Three-page PDF report</li>
+            <li>Analysis across 60 irrigation channels</li>
+            <li>Charts and Excel workbooks</li>
+            <li>Three-page nutrient analysis PDF</li>
           </ul>
         </div>
       </div>
-
       <div class="closing">
         <h2>Contact</h2>
         <p>
           <strong>Abd Alrahman Ahmed Mousa Mohamed</strong><br />
+          Computer Science · Age 22 · Born 6/6/2004<br />
           Phone: 01029646085<br />
-          Education: Computer Science · Age 22 · Born 6/6/2004<br />
+          Email: abdalrahmanahmedmousa@gmail.com<br />
           GitHub: github.com/engboda6<br />
-          Portfolio: engboda6.github.io/portfolio<br />
-          Email: abdalrahmanahmedmousa@gmail.com
+          Portfolio: engboda6.github.io/portfolio
         </p>
       </div>
-
       <div class="page-foot">
-        <span>Abd Alrahman Ahmed Mousa Mohamed · Portfolio</span>
+        <span>Abd Alrahman Ahmed Mousa Mohamed</span>
         <span>5 / 5</span>
       </div>
     </section>
