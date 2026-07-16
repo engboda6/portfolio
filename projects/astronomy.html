@@ -6,7 +6,7 @@
     <title>Cosmic Observer — Abd Alrahman</title>
     <meta
       name="description"
-      content="Cosmic Observer — desktop astronomy app with React, Three.js, Node.js/Express, and real NASA/JPL data, packaged with Electron."
+      content="Cosmic Observer — desktop astronomy app with 3D sky, NEO/debris tracking, dark-matter lensing research module, and AI tutor."
     />
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
@@ -25,67 +25,80 @@
           <p class="crumb"><a href="../index.html">Home</a> / Projects / Cosmic Observer</p>
           <h1>Cosmic Observer</h1>
           <p class="desc">
-            A Windows desktop astronomy observatory built with JavaScript end-to-end: React +
-            Three.js for a live 3D sky, Node.js/Express for local APIs and orbital calculations, and
-            Electron for a native .exe — powered by real NASA, JPL, and CelesTrak data.
+            Desktop astronomy app for Windows: interactive 3D sky, near-Earth object tracking,
+            orbital debris, dark-matter lensing maps, and an AI astronomy tutor — packaged as a
+            native <code>.exe</code>.
           </p>
+          <div class="cta-row">
+            <a
+              class="btn btn-primary"
+              href="https://github.com/engboda6/cosmic-observer"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View on GitHub</a
+            >
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/engboda6/cosmic-observer#quick-start"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Quick start</a
+            >
+          </div>
         </div>
       </header>
 
       <section class="content-block">
         <div class="block-inner">
-          <h2>Stack overview</h2>
-          <p class="section-lead" style="margin-bottom: 1.5rem">
-            Core language is JavaScript — React + Three.js on the frontend, Node.js/Express on the
-            backend, wrapped as a Windows desktop app with Electron.
+          <h2>Repository</h2>
+          <a
+            class="repo-card"
+            href="https://github.com/engboda6/cosmic-observer"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>engboda6 / cosmic-observer</strong>
+            <span>https://github.com/engboda6/cosmic-observer</span>
+          </a>
+          <p class="note">
+            Open source (MIT). Clone, run with Node.js 18+, or build the Windows installer and
+            portable exe.
           </p>
         </div>
       </section>
 
       <section class="content-block">
         <div class="block-inner">
-          <h2>Core languages</h2>
-          <ul class="tech-list">
-            <li>JavaScript (JSX)</li>
-            <li>HTML + CSS</li>
-            <li>PowerShell</li>
-            <li>GLSL</li>
+          <h2>Highlights</h2>
+          <ul class="feature-list">
+            <li>3D Sky — live celestial sphere from GPS or manual location</li>
+            <li>Sky Events — sunrise/sunset, moon phases, ISS pass estimates</li>
+            <li>NEO Tracking — NASA NeoWs feed with risk scoring</li>
+            <li>Orbital Debris — stations &amp; debris via CelesTrak</li>
+            <li>Dark Matter — lensing Δκ map + probabilistic black-hole zones</li>
+            <li>AI Tutor — OpenAI chat grounded in app context (mock without a key)</li>
           </ul>
+          <p class="note">
+            The dark-matter / black-hole section is a research-style probabilistic model (Myr–Gyr
+            scales), not a deterministic future-date prediction.
+          </p>
         </div>
       </section>
 
       <section class="content-block">
         <div class="block-inner">
-          <h2>Frontend</h2>
+          <h2>Tech stack</h2>
           <ul class="tech-list">
-            <li>React 18</li>
+            <li>Electron</li>
+            <li>React + Vite</li>
             <li>Three.js</li>
-            <li>Vite</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="content-block">
-        <div class="block-inner">
-          <h2>Backend</h2>
-          <ul class="tech-list">
-            <li>Node.js</li>
             <li>Express</li>
             <li>astronomy-engine</li>
             <li>OpenAI SDK</li>
-            <li>cors / dotenv</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="content-block">
-        <div class="block-inner">
-          <h2>Desktop packaging</h2>
-          <ul class="tech-list">
-            <li>Electron 33</li>
             <li>electron-builder</li>
-            <li>NSIS installer (.exe)</li>
-            <li>Portable build</li>
+            <li>JavaScript (JSX)</li>
+            <li>GLSL</li>
+            <li>PowerShell</li>
           </ul>
         </div>
       </section>
@@ -106,18 +119,13 @@
 
       <section class="content-block">
         <div class="block-inner">
-          <h2>Features</h2>
+          <h2>Architecture</h2>
           <ul class="feature-list">
-            <li>Interactive 3D sky (stars, planets, moons, Milky Way)</li>
-            <li>Realistic sky dome shading (GLSL)</li>
-            <li>Celestial positions via astronomy-engine</li>
-            <li>Sunrise / sunset and moon phases</li>
-            <li>Near-Earth objects &amp; impact risk (NASA / JPL)</li>
-            <li>Satellite tracking with TLE (CelesTrak)</li>
-            <li>Star cluster data from VizieR / CDS</li>
-            <li>AI astronomy guide chatbot (OpenAI)</li>
-            <li>Windows location via PowerShell</li>
-            <li>Desktop app with installer and portable builds</li>
+            <li><code>electron/</code> — Electron main + preload</li>
+            <li><code>server/</code> — Astronomy, NEO, debris, dark-matter, chat APIs</li>
+            <li><code>src/</code> — React UI + Three.js sky</li>
+            <li><code>scripts/</code> — build.bat / run-dev.bat</li>
+            <li><code>dist-electron/</code> — Built .exe (local only)</li>
           </ul>
         </div>
       </section>
@@ -129,32 +137,36 @@
             <figure>
               <img
                 src="../assets/images/astronomy/home.svg"
-                alt="Cosmic Observer home screen"
+                alt="Cosmic Observer 3D sky view"
               />
-              <figcaption>Home / observatory view</figcaption>
+              <figcaption>3D sky / observatory</figcaption>
             </figure>
             <figure>
               <img
                 src="../assets/images/astronomy/search.svg"
-                alt="Cosmic Observer search screen"
+                alt="Cosmic Observer NEO tracking"
               />
-              <figcaption>Object search</figcaption>
+              <figcaption>NEO &amp; debris tracking</figcaption>
             </figure>
             <figure>
               <img
                 src="../assets/images/astronomy/results.svg"
-                alt="Cosmic Observer 3D sky results"
+                alt="Cosmic Observer dark matter module"
               />
-              <figcaption>3D sky &amp; tracking</figcaption>
+              <figcaption>Dark-matter lensing module</figcaption>
             </figure>
             <figure>
               <img
                 src="../assets/images/astronomy/charts.svg"
-                alt="Cosmic Observer data dashboard"
+                alt="Cosmic Observer AI tutor"
               />
-              <figcaption>Data &amp; charts</figcaption>
+              <figcaption>AI astronomy tutor</figcaption>
             </figure>
           </div>
+          <p class="note">
+            Replace these placeholders with real screenshots from the app in
+            <code>assets/images/astronomy/</code>.
+          </p>
         </div>
       </section>
 
@@ -177,8 +189,15 @@
               </div>
             </div>
           </div>
-          <div class="back-row">
+          <div class="back-row cta-row">
             <a class="btn btn-ghost" href="../index.html#projects">← Back to projects</a>
+            <a
+              class="btn btn-primary"
+              href="https://github.com/engboda6/cosmic-observer"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Open GitHub repo</a
+            >
           </div>
         </div>
       </section>

@@ -10,7 +10,7 @@ Live site:
 
 ## Projects
 
-- **Cosmic Observer** — Windows astronomy desktop app (React, Three.js, Electron, Node.js/Express, NASA/JPL APIs)
+- **Cosmic Observer** — Windows astronomy desktop app ([engboda6/cosmic-observer](https://github.com/engboda6/cosmic-observer))
 - **Data Analysis Platform** — dataset cleaning, analysis, charts, and reports (Python, Pandas, NumPy, Matplotlib, SQL)
 
 ## Local preview
