@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -14,521 +14,425 @@
         size: A4;
         margin: 0;
       }
+
       * {
         box-sizing: border-box;
       }
+
       html,
       body {
         margin: 0;
         padding: 0;
-        background: #fff;
-        color: #1a1a1a;
-        font-family: "Source Sans 3", "Segoe UI", sans-serif;
+        background: #ffffff;
+        color: #202936;
+        font-family: "Inter", "Segoe UI", sans-serif;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
+
       .page {
+        position: relative;
         width: 210mm;
         height: 297mm;
-        page-break-after: always;
-        break-after: page;
-        position: relative;
         overflow: hidden;
-        background: #fff;
-      }
-      .page:last-child {
-        page-break-after: auto;
-      }
-      .page-inner {
-        padding: 14mm 16mm 16mm;
-        height: 100%;
-      }
-      h1,
-      h2 {
-        font-family: "Libre Baskerville", Georgia, serif;
-        margin: 0;
-        color: #111;
-      }
-      .sec {
-        font-family: "Libre Baskerville", Georgia, serif;
-        font-size: 13pt;
-        font-weight: 700;
-        color: #1e3a5f;
-        margin: 0 0 3.5mm;
-        padding-bottom: 1.5mm;
-        border-bottom: 1.5px solid #1e3a5f;
-      }
-      .top {
-        display: grid;
-        grid-template-columns: 48mm 1fr;
-        gap: 8mm;
-        margin-bottom: 6mm;
-        align-items: start;
-      }
-      .photo {
-        width: 48mm;
-        height: 58mm;
-        object-fit: cover;
-        object-position: top center;
-        border: 1px solid #d0d7e2;
-        display: block;
-      }
-      .name {
-        font-size: 22pt;
-        line-height: 1.15;
-        margin-bottom: 2.5mm;
-      }
-      .title {
-        font-size: 11.5pt;
-        color: #1e3a5f;
-        font-weight: 600;
-        margin: 0 0 3.5mm;
-      }
-      .contacts {
-        font-size: 9.5pt;
-        color: #444;
-        line-height: 1.65;
-      }
-      .contacts span {
-        display: inline-block;
-        margin-right: 4mm;
-      }
-      .profile {
-        margin: 0 0 5.5mm;
-        font-size: 10pt;
-        line-height: 1.55;
-        color: #333;
-        text-align: justify;
-      }
-      .two {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 7mm;
-      }
-      .skill-block {
-        margin-bottom: 4.5mm;
-      }
-      .skill-block h3 {
-        font-family: "Source Sans 3", sans-serif;
-        font-size: 10pt;
-        font-weight: 700;
-        color: #1e3a5f;
-        margin: 0 0 2mm;
-      }
-      .skill-block p {
-        margin: 0;
-        font-size: 9.5pt;
-        color: #333;
-        line-height: 1.5;
-      }
-      .tag {
-        display: inline-block;
-        padding: 2px 7px;
-        margin: 0 2px 3px 0;
-        border: 1px solid #c9d3e0;
-        background: #f3f6fa;
-        color: #243b53;
-        font-size: 8.5pt;
-        font-weight: 600;
-      }
-      .edu-row {
-        display: flex;
-        justify-content: space-between;
-        font-size: 10pt;
-        margin-bottom: 2mm;
-      }
-      .panel {
-        margin-top: 6mm;
-        border: 1px solid #1e3a5f;
-        background: #1e3a5f;
-        color: #fff;
-        padding: 5mm 6mm;
-      }
-      .panel h2 {
-        color: #fff;
-        font-size: 13pt;
-        margin-bottom: 2.5mm;
-      }
-      .panel p {
-        margin: 0;
-        font-size: 10pt;
-        line-height: 1.6;
-        color: #e8eef8;
-      }
-      .page-foot {
-        position: absolute;
-        left: 16mm;
-        right: 16mm;
-        bottom: 8mm;
-        display: flex;
-        justify-content: space-between;
-        font-size: 8pt;
-        color: #777;
-        border-top: 1px solid #e5e9ef;
-        padding-top: 2mm;
+        background: #ffffff;
       }
 
-      .cv-header {
+      .header {
+        height: 64mm;
+        padding: 13mm 16mm 11mm;
+        color: #ffffff;
+        background: #14283d;
+      }
+
+      .header-grid {
         display: grid;
-        grid-template-columns: 40mm 1fr;
-        gap: 9mm;
+        grid-template-columns: 32mm 1fr;
+        gap: 8mm;
         align-items: center;
-        padding-bottom: 7mm;
-        margin-bottom: 8mm;
-        border-bottom: 2px solid #1e3a5f;
       }
-      .cv-header .photo {
-        width: 40mm;
-        height: 48mm;
+
+      .photo {
+        width: 32mm;
+        height: 38mm;
+        display: block;
+        object-fit: cover;
+        object-position: top center;
+        border: 2px solid rgba(255, 255, 255, 0.72);
+        border-radius: 2mm;
       }
-      .cv-header .name {
-        font-size: 23pt;
+
+      .name {
+        margin: 0 0 2mm;
+        color: #ffffff;
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: 22pt;
+        line-height: 1.15;
+        font-weight: 700;
       }
-      .contact-line {
+
+      .role {
+        margin: 0 0 4mm;
+        color: #8ed9d2;
+        font-size: 10.5pt;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .contact-row {
         display: flex;
         flex-wrap: wrap;
         gap: 1.5mm 5mm;
-        color: #4a5565;
-        font-size: 9pt;
-        line-height: 1.5;
-      }
-      .contact-line span {
-        white-space: nowrap;
-      }
-      .content-grid {
-        display: grid;
-        grid-template-columns: 58mm 1fr;
-        gap: 9mm;
-      }
-      .sidebar {
-        padding: 6mm 5mm;
-        background: #f3f6fa;
-        border-top: 4px solid #1e3a5f;
-      }
-      .side-section + .side-section {
-        margin-top: 7mm;
-      }
-      .side-title {
-        margin: 0 0 3mm;
-        color: #1e3a5f;
-        font-family: "Source Sans 3", sans-serif;
-        font-size: 9.5pt;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-      .side-section p {
-        margin: 0;
-        color: #3f4854;
-        font-size: 9pt;
-        line-height: 1.55;
-      }
-      .side-list {
-        margin: 0;
-        padding-left: 4mm;
-        color: #3f4854;
-        font-size: 9pt;
-        line-height: 1.55;
-      }
-      .main-column .sec {
-        margin-top: 0;
-      }
-      .main-section + .main-section {
-        margin-top: 8mm;
-      }
-      .summary-card {
-        padding: 5mm;
-        color: #303946;
-        background: #f8fafc;
-        border: 1px solid #dce3eb;
-        border-left: 4px solid #1e3a5f;
-        font-size: 10pt;
-        line-height: 1.65;
-      }
-      .strength-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4mm;
-      }
-      .strength-card {
-        min-height: 29mm;
-        padding: 4mm;
-        border: 1px solid #dce3eb;
-        background: #fff;
-      }
-      .strength-card strong {
-        display: block;
-        margin-bottom: 1.5mm;
-        color: #1e3a5f;
-        font-size: 9.5pt;
-      }
-      .strength-card p {
-        margin: 0;
-        color: #4a5565;
-        font-size: 8.8pt;
+        color: #dce5ed;
+        font-size: 8.5pt;
         line-height: 1.45;
       }
-      .page-heading {
-        margin-bottom: 3mm;
-        font-size: 21pt;
+
+      .contact-row span {
+        white-space: nowrap;
       }
-      .page-intro {
-        max-width: 160mm;
-        margin: 0 0 8mm;
-        color: #52606d;
+
+      .body {
+        display: grid;
+        grid-template-columns: 55mm 1fr;
+        min-height: 219mm;
+      }
+
+      .sidebar {
+        padding: 10mm 6mm 12mm 16mm;
+        background: #f1f5f7;
+        border-right: 1px solid #dce3e8;
+      }
+
+      .main {
+        padding: 10mm 16mm 12mm 9mm;
+      }
+
+      .section {
+        margin-bottom: 7mm;
+      }
+
+      .section:last-child {
+        margin-bottom: 0;
+      }
+
+      .heading {
+        margin: 0 0 3.5mm;
+        padding-bottom: 1.8mm;
+        color: #14283d;
         font-size: 10pt;
+        font-weight: 700;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+        border-bottom: 1.5px solid #54aaa4;
+      }
+
+      .sidebar p,
+      .sidebar li {
+        color: #435160;
+        font-size: 8.7pt;
         line-height: 1.55;
       }
-      .skills-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+
+      .sidebar p {
+        margin: 0;
+      }
+
+      .sidebar p + p {
+        margin-top: 2.5mm;
+      }
+
+      .sidebar ul {
+        margin: 0;
+        padding-left: 4mm;
+      }
+
+      .sidebar li {
+        margin-bottom: 1.5mm;
+      }
+
+      .label {
+        display: block;
+        margin-bottom: 0.5mm;
+        color: #14283d;
+        font-size: 8pt;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .profile {
+        margin: 0;
+        color: #374553;
+        font-size: 9.5pt;
+        line-height: 1.65;
+        text-align: left;
+      }
+
+      .education {
+        display: flex;
+        justify-content: space-between;
         gap: 5mm;
+        padding: 4mm;
+        background: #f7f9fa;
+        border-left: 3px solid #54aaa4;
       }
-      .skills-card {
-        min-height: 49mm;
-        padding: 5mm;
-        border: 1px solid #d8e0e9;
-        background: #f8fafc;
+
+      .education strong {
+        display: block;
+        margin-bottom: 1mm;
+        color: #14283d;
+        font-size: 9.5pt;
       }
-      .skills-card h3 {
-        margin: 0 0 3mm;
-        color: #1e3a5f;
-        font-family: "Source Sans 3", sans-serif;
-        font-size: 10.5pt;
+
+      .education span {
+        color: #596777;
+        font-size: 8.7pt;
+      }
+
+      .status {
+        white-space: nowrap;
+        font-weight: 600;
+      }
+
+      .skill-group {
+        margin-bottom: 4.5mm;
+      }
+
+      .skill-group:last-child {
+        margin-bottom: 0;
+      }
+
+      .skill-title {
+        margin: 0 0 2mm;
+        color: #14283d;
+        font-size: 9pt;
         font-weight: 700;
       }
-      .skills-card p {
-        margin: 0;
-        color: #3d4652;
-        font-size: 9pt;
-        line-height: 1.6;
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5mm;
       }
-      .skills-card .tag {
-        margin-bottom: 4px;
+
+      .tag {
+        padding: 1.5mm 2.3mm;
+        color: #304252;
+        background: #edf3f4;
+        border: 1px solid #d5e1e3;
+        border-radius: 1mm;
+        font-size: 7.8pt;
+        font-weight: 600;
       }
-      .proficiency {
+
+      .competencies {
         display: grid;
-        grid-template-columns: 28mm 1fr;
-        gap: 3mm;
-        align-items: center;
-        margin-bottom: 3mm;
-        color: #3d4652;
-        font-size: 9pt;
+        grid-template-columns: 1fr 1fr;
+        gap: 3mm 5mm;
+        margin: 0;
+        padding: 0;
+        list-style: none;
       }
-      .bar {
-        height: 5px;
-        background: #dce3eb;
+
+      .competencies li {
+        position: relative;
+        padding: 3mm 3mm 3mm 7mm;
+        color: #40505f;
+        background: #f7f9fa;
+        border: 1px solid #e2e8ec;
+        font-size: 8.5pt;
+        line-height: 1.4;
       }
-      .bar span {
-        display: block;
-        height: 100%;
-        background: #1e3a5f;
+
+      .competencies li::before {
+        content: "";
+        position: absolute;
+        left: 3mm;
+        top: 4.2mm;
+        width: 2mm;
+        height: 2mm;
+        background: #54aaa4;
+      }
+
+      .strengths {
+        margin: 0;
+        padding-left: 4.5mm;
+        color: #40505f;
+        font-size: 8.7pt;
+        line-height: 1.55;
+      }
+
+      .strengths li {
+        margin-bottom: 1.5mm;
+      }
+
+      .footer {
+        position: absolute;
+        left: 16mm;
+        right: 16mm;
+        bottom: 6mm;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2mm;
+        color: #7a8794;
+        border-top: 1px solid #dce3e8;
+        font-size: 7.5pt;
       }
     </style>
   </head>
   <body>
     <section class="page">
-      <div class="page-inner">
-        <header class="cv-header">
+      <header class="header">
+        <div class="header-grid">
           <img class="photo" src="assets/images/profile.png" alt="Abd Alrahman Ahmed" />
           <div>
             <h1 class="name">Abd Alrahman Ahmed Mousa Mohamed</h1>
-            <p class="title">Computer Science · Software &amp; Data Developer</p>
-            <div class="contact-line">
-              <span>01029646085</span>
-              <span>abdalrahmanahmedmousa@gmail.com</span>
-              <span>github.com/engboda6</span>
-              <span>engboda6.github.io/portfolio</span>
+            <p class="role">Computer Science · Software &amp; Data Developer</p>
+            <div class="contact-row">
+              <span>Phone: 01029646085</span>
+              <span>Email: abdalrahmanahmedmousa@gmail.com</span>
+              <span>GitHub: github.com/engboda6</span>
+              <span>Portfolio: engboda6.github.io/portfolio</span>
             </div>
           </div>
-        </header>
-
-        <div class="content-grid">
-          <aside class="sidebar">
-            <div class="side-section">
-              <h2 class="side-title">Personal Details</h2>
-              <p>Born: 6 June 2004</p>
-              <p>Age: 22</p>
-              <p>Location: Egypt</p>
-            </div>
-
-            <div class="side-section">
-              <h2 class="side-title">Education</h2>
-              <p><strong>Computer Science</strong></p>
-              <p>Faculty of Computers &amp; Information</p>
-              <p>Ongoing</p>
-            </div>
-
-            <div class="side-section">
-              <h2 class="side-title">Languages</h2>
-              <p><strong>Arabic</strong><br />Native</p>
-              <p style="margin-top: 3mm"><strong>English</strong><br />Professional working proficiency</p>
-            </div>
-
-            <div class="side-section">
-              <h2 class="side-title">Focus Areas</h2>
-              <ul class="side-list">
-                <li>Desktop applications</li>
-                <li>Data analysis systems</li>
-                <li>3D visualization</li>
-                <li>Business analytics</li>
-                <li>Technical reporting</li>
-              </ul>
-            </div>
-          </aside>
-
-          <main class="main-column">
-            <section class="main-section">
-              <h2 class="sec">Professional Profile</h2>
-              <div class="summary-card">
-                Computer Science student and software developer focused on desktop applications and
-                data analysis systems. Strong in JavaScript and Python, with practical experience in
-                user interfaces, local APIs, data pipelines, visualization, desktop packaging, and
-                professional reporting. I deliver clear, usable software and well-structured outputs.
-              </div>
-            </section>
-
-            <section class="main-section">
-              <h2 class="sec">Core Competencies</h2>
-              <div class="strength-grid">
-                <div class="strength-card">
-                  <strong>Software Development</strong>
-                  <p>End-to-end implementation, clean interfaces, APIs, and maintainable structure.</p>
-                </div>
-                <div class="strength-card">
-                  <strong>Desktop Delivery</strong>
-                  <p>Windows application packaging, installers, portable builds, and release outputs.</p>
-                </div>
-                <div class="strength-card">
-                  <strong>Data Analytics</strong>
-                  <p>Data preparation, aggregation, KPIs, numerical analysis, and visualization.</p>
-                </div>
-                <div class="strength-card">
-                  <strong>Reporting</strong>
-                  <p>Professional HTML, PDF, Excel, charts, and client-ready documentation.</p>
-                </div>
-              </div>
-            </section>
-
-            <section class="main-section">
-              <h2 class="sec">Professional Strengths</h2>
-              <ul class="side-list" style="font-size: 9.5pt; line-height: 1.7">
-                <li>Translate business requirements into concrete technical deliverables.</li>
-                <li>Work across frontend, backend, desktop, and analytical workflows.</li>
-                <li>Present technical results clearly through visuals and structured reports.</li>
-                <li>Build bilingual interfaces for Arabic and English users.</li>
-                <li>Document work for clients, reviewers, and future maintenance.</li>
-              </ul>
-            </section>
-          </main>
         </div>
+      </header>
+
+      <div class="body">
+        <aside class="sidebar">
+          <section class="section">
+            <h2 class="heading">Personal</h2>
+            <p><span class="label">Date of birth</span>6 June 2004</p>
+            <p><span class="label">Age</span>22</p>
+            <p><span class="label">Location</span>Egypt</p>
+          </section>
+
+          <section class="section">
+            <h2 class="heading">Languages</h2>
+            <p><span class="label">Arabic</span>Native</p>
+            <p><span class="label">English</span>Professional working proficiency</p>
+          </section>
+
+          <section class="section">
+            <h2 class="heading">Tools</h2>
+            <ul>
+              <li>Git &amp; GitHub</li>
+              <li>Windows packaging</li>
+              <li>Excel &amp; CSV</li>
+              <li>PDF reporting</li>
+              <li>Technical documentation</li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2 class="heading">Focus</h2>
+            <ul>
+              <li>Desktop applications</li>
+              <li>Data analysis</li>
+              <li>3D visualization</li>
+              <li>Business reporting</li>
+              <li>Arabic / English UI</li>
+            </ul>
+          </section>
+        </aside>
+
+        <main class="main">
+          <section class="section">
+            <h2 class="heading">Professional Profile</h2>
+            <p class="profile">
+              Computer Science student and software developer focused on desktop applications and
+              data analysis systems. Skilled in JavaScript and Python, with hands-on experience in
+              user interfaces, APIs, data pipelines, visualization, desktop packaging, and
+              professional reporting. I create clear, maintainable software and structured
+              deliverables for real business needs.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2 class="heading">Education</h2>
+            <div class="education">
+              <div>
+                <strong>Computer Science</strong>
+                <span>Faculty of Computers &amp; Information</span>
+              </div>
+              <span class="status">Ongoing</span>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="heading">Technical Skills</h2>
+
+            <div class="skill-group">
+              <h3 class="skill-title">Programming Languages</h3>
+              <div class="tags">
+                <span class="tag">JavaScript (JSX)</span>
+                <span class="tag">Python</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">SQL</span>
+                <span class="tag">GLSL</span>
+                <span class="tag">PowerShell</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h3 class="skill-title">Frontend &amp; Desktop</h3>
+              <div class="tags">
+                <span class="tag">React 18</span>
+                <span class="tag">Three.js</span>
+                <span class="tag">Vite</span>
+                <span class="tag">Electron</span>
+                <span class="tag">electron-builder</span>
+                <span class="tag">SVG</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h3 class="skill-title">Backend &amp; Integration</h3>
+              <div class="tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">Express</span>
+                <span class="tag">REST APIs</span>
+                <span class="tag">OpenAI SDK</span>
+                <span class="tag">cors</span>
+                <span class="tag">dotenv</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h3 class="skill-title">Data &amp; Analytics</h3>
+              <div class="tags">
+                <span class="tag">pandas</span>
+                <span class="tag">numpy</span>
+                <span class="tag">matplotlib</span>
+                <span class="tag">openpyxl</span>
+                <span class="tag">PyMuPDF</span>
+                <span class="tag">KPI Analysis</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="heading">Core Competencies</h2>
+            <ul class="competencies">
+              <li>End-to-end software development</li>
+              <li>Desktop application delivery</li>
+              <li>Data cleaning and analysis</li>
+              <li>Charts and visualization</li>
+              <li>API integration</li>
+              <li>Client-ready reports</li>
+            </ul>
+          </section>
+
+        </main>
       </div>
-      <div class="page-foot">
-        <span>Abd Alrahman Ahmed Mousa Mohamed — CV</span>
-        <span>1 / 2</span>
-      </div>
-    </section>
 
-    <section class="page">
-      <div class="page-inner">
-        <h1 class="page-heading">Technical Skills</h1>
-        <p class="page-intro">
-          Technologies and delivery capabilities organized by area. Project names are intentionally
-          excluded; full work samples remain available on the portfolio website.
-        </p>
-
-        <div class="skills-grid">
-          <section class="skills-card">
-            <h3>Programming Languages</h3>
-            <p>
-              <span class="tag">JavaScript (JSX)</span>
-              <span class="tag">Python</span>
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">SQL</span>
-              <span class="tag">GLSL</span>
-              <span class="tag">PowerShell</span>
-            </p>
-          </section>
-
-          <section class="skills-card">
-            <h3>Frontend &amp; Desktop</h3>
-            <p>
-              <span class="tag">React 18</span>
-              <span class="tag">Three.js</span>
-              <span class="tag">Vite</span>
-              <span class="tag">Electron</span>
-              <span class="tag">electron-builder</span>
-              <span class="tag">SVG</span>
-              <span class="tag">Responsive UI</span>
-            </p>
-          </section>
-
-          <section class="skills-card">
-            <h3>Backend &amp; Integration</h3>
-            <p>
-              <span class="tag">Node.js</span>
-              <span class="tag">Express</span>
-              <span class="tag">REST APIs</span>
-              <span class="tag">OpenAI SDK</span>
-              <span class="tag">cors</span>
-              <span class="tag">dotenv</span>
-              <span class="tag">External APIs</span>
-            </p>
-          </section>
-
-          <section class="skills-card">
-            <h3>Data &amp; Analytics</h3>
-            <p>
-              <span class="tag">pandas</span>
-              <span class="tag">numpy</span>
-              <span class="tag">matplotlib</span>
-              <span class="tag">openpyxl</span>
-              <span class="tag">PyMuPDF</span>
-              <span class="tag">Excel</span>
-              <span class="tag">CSV</span>
-              <span class="tag">KPI Analysis</span>
-            </p>
-          </section>
-
-          <section class="skills-card">
-            <h3>Tools &amp; Delivery</h3>
-            <p>
-              <span class="tag">Git</span>
-              <span class="tag">GitHub</span>
-              <span class="tag">Windows .exe Packaging</span>
-              <span class="tag">Chrome Headless</span>
-              <span class="tag">PDF Reporting</span>
-              <span class="tag">Technical Documentation</span>
-            </p>
-          </section>
-
-          <section class="skills-card">
-            <h3>Working Capabilities</h3>
-            <p>
-              Desktop application development · 3D rendering · Data cleaning · Statistical analysis
-              · Charts and dashboards · Business metrics · Arabic / English interfaces · Client
-              deliverables
-            </p>
-          </section>
-        </div>
-
-        <section style="margin-top: 9mm">
-          <h2 class="sec">Language Proficiency</h2>
-          <div class="proficiency">
-            <strong>Arabic</strong>
-            <div class="bar"><span style="width: 100%"></span></div>
-          </div>
-          <div class="proficiency">
-            <strong>English</strong>
-            <div class="bar"><span style="width: 78%"></span></div>
-          </div>
-        </section>
-      </div>
-      <div class="page-foot">
-        <span>Abd Alrahman Ahmed Mousa Mohamed — Technical Skills</span>
-        <span>2 / 2</span>
-      </div>
+      <footer class="footer">
+        <span>Abd Alrahman Ahmed Mousa Mohamed</span>
+        <span>Curriculum Vitae</span>
+      </footer>
     </section>
   </body>
 </html>
