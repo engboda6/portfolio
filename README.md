@@ -10,7 +10,7 @@ Live site:
 
 ## Projects
 
-- **Glasses Store** — full-stack eyewear e-commerce with admin dashboard and virtual try-on ([engboda6/glasses-store](https://github.com/engboda6/glasses-store))
+- **Online Store** — full-stack e-commerce with admin dashboard and virtual try-on ([engboda6/glasses-store](https://github.com/engboda6/glasses-store))
 - **Cosmic Observer** — Windows astronomy desktop app ([engboda6/cosmic-observer](https://github.com/engboda6/cosmic-observer))
 - **Vertical Farm Telemetry Analysis** — Python pipeline (pandas, numpy, matplotlib, openpyxl) from farm CSV to PDF report
 - **Home Repair Loyalty Analysis** — surveys & bundles from 2,000 marketing rows; dark 5-page client PDF
