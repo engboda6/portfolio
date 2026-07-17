@@ -167,131 +167,367 @@
         border-top: 1px solid #e5e9ef;
         padding-top: 2mm;
       }
+
+      .cv-header {
+        display: grid;
+        grid-template-columns: 40mm 1fr;
+        gap: 9mm;
+        align-items: center;
+        padding-bottom: 7mm;
+        margin-bottom: 8mm;
+        border-bottom: 2px solid #1e3a5f;
+      }
+      .cv-header .photo {
+        width: 40mm;
+        height: 48mm;
+      }
+      .cv-header .name {
+        font-size: 23pt;
+      }
+      .contact-line {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5mm 5mm;
+        color: #4a5565;
+        font-size: 9pt;
+        line-height: 1.5;
+      }
+      .contact-line span {
+        white-space: nowrap;
+      }
+      .content-grid {
+        display: grid;
+        grid-template-columns: 58mm 1fr;
+        gap: 9mm;
+      }
+      .sidebar {
+        padding: 6mm 5mm;
+        background: #f3f6fa;
+        border-top: 4px solid #1e3a5f;
+      }
+      .side-section + .side-section {
+        margin-top: 7mm;
+      }
+      .side-title {
+        margin: 0 0 3mm;
+        color: #1e3a5f;
+        font-family: "Source Sans 3", sans-serif;
+        font-size: 9.5pt;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .side-section p {
+        margin: 0;
+        color: #3f4854;
+        font-size: 9pt;
+        line-height: 1.55;
+      }
+      .side-list {
+        margin: 0;
+        padding-left: 4mm;
+        color: #3f4854;
+        font-size: 9pt;
+        line-height: 1.55;
+      }
+      .main-column .sec {
+        margin-top: 0;
+      }
+      .main-section + .main-section {
+        margin-top: 8mm;
+      }
+      .summary-card {
+        padding: 5mm;
+        color: #303946;
+        background: #f8fafc;
+        border: 1px solid #dce3eb;
+        border-left: 4px solid #1e3a5f;
+        font-size: 10pt;
+        line-height: 1.65;
+      }
+      .strength-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4mm;
+      }
+      .strength-card {
+        min-height: 29mm;
+        padding: 4mm;
+        border: 1px solid #dce3eb;
+        background: #fff;
+      }
+      .strength-card strong {
+        display: block;
+        margin-bottom: 1.5mm;
+        color: #1e3a5f;
+        font-size: 9.5pt;
+      }
+      .strength-card p {
+        margin: 0;
+        color: #4a5565;
+        font-size: 8.8pt;
+        line-height: 1.45;
+      }
+      .page-heading {
+        margin-bottom: 3mm;
+        font-size: 21pt;
+      }
+      .page-intro {
+        max-width: 160mm;
+        margin: 0 0 8mm;
+        color: #52606d;
+        font-size: 10pt;
+        line-height: 1.55;
+      }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5mm;
+      }
+      .skills-card {
+        min-height: 49mm;
+        padding: 5mm;
+        border: 1px solid #d8e0e9;
+        background: #f8fafc;
+      }
+      .skills-card h3 {
+        margin: 0 0 3mm;
+        color: #1e3a5f;
+        font-family: "Source Sans 3", sans-serif;
+        font-size: 10.5pt;
+        font-weight: 700;
+      }
+      .skills-card p {
+        margin: 0;
+        color: #3d4652;
+        font-size: 9pt;
+        line-height: 1.6;
+      }
+      .skills-card .tag {
+        margin-bottom: 4px;
+      }
+      .proficiency {
+        display: grid;
+        grid-template-columns: 28mm 1fr;
+        gap: 3mm;
+        align-items: center;
+        margin-bottom: 3mm;
+        color: #3d4652;
+        font-size: 9pt;
+      }
+      .bar {
+        height: 5px;
+        background: #dce3eb;
+      }
+      .bar span {
+        display: block;
+        height: 100%;
+        background: #1e3a5f;
+      }
     </style>
   </head>
   <body>
     <section class="page">
       <div class="page-inner">
-        <div class="top">
+        <header class="cv-header">
           <img class="photo" src="assets/images/profile.png" alt="Abd Alrahman Ahmed" />
           <div>
             <h1 class="name">Abd Alrahman Ahmed Mousa Mohamed</h1>
             <p class="title">Computer Science · Software &amp; Data Developer</p>
-            <div class="contacts">
+            <div class="contact-line">
               <span>01029646085</span>
-              <span>abdalrahmanahmedmousa@gmail.com</span><br />
+              <span>abdalrahmanahmedmousa@gmail.com</span>
               <span>github.com/engboda6</span>
-              <span>engboda6.github.io/portfolio</span><br />
-              <span>Born 6/6/2004 · Age 22 · Egypt</span>
+              <span>engboda6.github.io/portfolio</span>
             </div>
           </div>
-        </div>
+        </header>
 
-        <h2 class="sec">Professional Profile</h2>
-        <p class="profile">
-          Computer Science student and software developer specializing in desktop applications and
-          data analysis systems. Strong in JavaScript (React, Electron, Three.js) and Python
-          (pandas, analytics, reporting). Comfortable delivering working software, clean datasets,
-          and professional documentation for clients and hiring teams.
-        </p>
+        <div class="content-grid">
+          <aside class="sidebar">
+            <div class="side-section">
+              <h2 class="side-title">Personal Details</h2>
+              <p>Born: 6 June 2004</p>
+              <p>Age: 22</p>
+              <p>Location: Egypt</p>
+            </div>
 
-        <h2 class="sec">Education</h2>
-        <div class="edu-row">
-          <div>
-            <strong>Computer Science</strong>
-            <span style="color: #555"> — Faculty of Computers &amp; Information</span>
-          </div>
-          <span style="color: #555">Ongoing</span>
-        </div>
+            <div class="side-section">
+              <h2 class="side-title">Education</h2>
+              <p><strong>Computer Science</strong></p>
+              <p>Faculty of Computers &amp; Information</p>
+              <p>Ongoing</p>
+            </div>
 
-        <h2 class="sec" style="margin-top: 5mm">Technical Skills</h2>
-        <div class="two">
-          <div>
-            <div class="skill-block">
-              <h3>Programming Languages</h3>
-              <p>
-                <span class="tag">JavaScript (JSX)</span>
-                <span class="tag">Python</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">SQL</span>
-                <span class="tag">GLSL</span>
-                <span class="tag">PowerShell</span>
-              </p>
+            <div class="side-section">
+              <h2 class="side-title">Languages</h2>
+              <p><strong>Arabic</strong><br />Native</p>
+              <p style="margin-top: 3mm"><strong>English</strong><br />Professional working proficiency</p>
             </div>
-            <div class="skill-block">
-              <h3>Frontend &amp; Desktop</h3>
-              <p>
-                <span class="tag">React 18</span>
-                <span class="tag">Three.js</span>
-                <span class="tag">Vite</span>
-                <span class="tag">Electron</span>
-                <span class="tag">electron-builder</span>
-                <span class="tag">SVG</span>
-              </p>
-            </div>
-            <div class="skill-block">
-              <h3>Backend &amp; APIs</h3>
-              <p>
-                <span class="tag">Node.js</span>
-                <span class="tag">Express</span>
-                <span class="tag">REST APIs</span>
-                <span class="tag">OpenAI SDK</span>
-                <span class="tag">dotenv</span>
-              </p>
-            </div>
-          </div>
-          <div>
-            <div class="skill-block">
-              <h3>Data &amp; Analytics</h3>
-              <p>
-                <span class="tag">pandas</span>
-                <span class="tag">numpy</span>
-                <span class="tag">matplotlib</span>
-                <span class="tag">openpyxl</span>
-                <span class="tag">PyMuPDF</span>
-                <span class="tag">Excel / CSV</span>
-              </p>
-            </div>
-            <div class="skill-block">
-              <h3>Tools &amp; Delivery</h3>
-              <p>
-                <span class="tag">Git / GitHub</span>
-                <span class="tag">Windows .exe packaging</span>
-                <span class="tag">PDF reporting</span>
-                <span class="tag">Chrome Headless</span>
-              </p>
-            </div>
-            <div class="skill-block">
-              <h3>Domain Skills</h3>
-              <p>
-                Desktop app development · 3D visualization · Data cleaning &amp; KPIs · Business
-                analytics · Technical reporting · Bilingual UI (Arabic / English)
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <h2 class="sec" style="margin-top: 2mm">Languages</h2>
-        <p style="margin: 0 0 2mm; font-size: 10pt">
-          <strong>Arabic</strong> — Native &nbsp;·&nbsp; <strong>English</strong> — Professional
-          working proficiency
-        </p>
+            <div class="side-section">
+              <h2 class="side-title">Focus Areas</h2>
+              <ul class="side-list">
+                <li>Desktop applications</li>
+                <li>Data analysis systems</li>
+                <li>3D visualization</li>
+                <li>Business analytics</li>
+                <li>Technical reporting</li>
+              </ul>
+            </div>
+          </aside>
 
-        <div class="panel">
-          <h2>Contact</h2>
-          <p>
-            Abd Alrahman Ahmed Mousa Mohamed<br />
-            Phone: 01029646085<br />
-            Email: abdalrahmanahmedmousa@gmail.com<br />
-            GitHub: github.com/engboda6<br />
-            Portfolio: engboda6.github.io/portfolio
-          </p>
+          <main class="main-column">
+            <section class="main-section">
+              <h2 class="sec">Professional Profile</h2>
+              <div class="summary-card">
+                Computer Science student and software developer focused on desktop applications and
+                data analysis systems. Strong in JavaScript and Python, with practical experience in
+                user interfaces, local APIs, data pipelines, visualization, desktop packaging, and
+                professional reporting. I deliver clear, usable software and well-structured outputs.
+              </div>
+            </section>
+
+            <section class="main-section">
+              <h2 class="sec">Core Competencies</h2>
+              <div class="strength-grid">
+                <div class="strength-card">
+                  <strong>Software Development</strong>
+                  <p>End-to-end implementation, clean interfaces, APIs, and maintainable structure.</p>
+                </div>
+                <div class="strength-card">
+                  <strong>Desktop Delivery</strong>
+                  <p>Windows application packaging, installers, portable builds, and release outputs.</p>
+                </div>
+                <div class="strength-card">
+                  <strong>Data Analytics</strong>
+                  <p>Data preparation, aggregation, KPIs, numerical analysis, and visualization.</p>
+                </div>
+                <div class="strength-card">
+                  <strong>Reporting</strong>
+                  <p>Professional HTML, PDF, Excel, charts, and client-ready documentation.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="main-section">
+              <h2 class="sec">Professional Strengths</h2>
+              <ul class="side-list" style="font-size: 9.5pt; line-height: 1.7">
+                <li>Translate business requirements into concrete technical deliverables.</li>
+                <li>Work across frontend, backend, desktop, and analytical workflows.</li>
+                <li>Present technical results clearly through visuals and structured reports.</li>
+                <li>Build bilingual interfaces for Arabic and English users.</li>
+                <li>Document work for clients, reviewers, and future maintenance.</li>
+              </ul>
+            </section>
+          </main>
         </div>
       </div>
       <div class="page-foot">
         <span>Abd Alrahman Ahmed Mousa Mohamed — CV</span>
-        <span>1 / 1</span>
+        <span>1 / 2</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="page-inner">
+        <h1 class="page-heading">Technical Skills</h1>
+        <p class="page-intro">
+          Technologies and delivery capabilities organized by area. Project names are intentionally
+          excluded; full work samples remain available on the portfolio website.
+        </p>
+
+        <div class="skills-grid">
+          <section class="skills-card">
+            <h3>Programming Languages</h3>
+            <p>
+              <span class="tag">JavaScript (JSX)</span>
+              <span class="tag">Python</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">SQL</span>
+              <span class="tag">GLSL</span>
+              <span class="tag">PowerShell</span>
+            </p>
+          </section>
+
+          <section class="skills-card">
+            <h3>Frontend &amp; Desktop</h3>
+            <p>
+              <span class="tag">React 18</span>
+              <span class="tag">Three.js</span>
+              <span class="tag">Vite</span>
+              <span class="tag">Electron</span>
+              <span class="tag">electron-builder</span>
+              <span class="tag">SVG</span>
+              <span class="tag">Responsive UI</span>
+            </p>
+          </section>
+
+          <section class="skills-card">
+            <h3>Backend &amp; Integration</h3>
+            <p>
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">OpenAI SDK</span>
+              <span class="tag">cors</span>
+              <span class="tag">dotenv</span>
+              <span class="tag">External APIs</span>
+            </p>
+          </section>
+
+          <section class="skills-card">
+            <h3>Data &amp; Analytics</h3>
+            <p>
+              <span class="tag">pandas</span>
+              <span class="tag">numpy</span>
+              <span class="tag">matplotlib</span>
+              <span class="tag">openpyxl</span>
+              <span class="tag">PyMuPDF</span>
+              <span class="tag">Excel</span>
+              <span class="tag">CSV</span>
+              <span class="tag">KPI Analysis</span>
+            </p>
+          </section>
+
+          <section class="skills-card">
+            <h3>Tools &amp; Delivery</h3>
+            <p>
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">Windows .exe Packaging</span>
+              <span class="tag">Chrome Headless</span>
+              <span class="tag">PDF Reporting</span>
+              <span class="tag">Technical Documentation</span>
+            </p>
+          </section>
+
+          <section class="skills-card">
+            <h3>Working Capabilities</h3>
+            <p>
+              Desktop application development · 3D rendering · Data cleaning · Statistical analysis
+              · Charts and dashboards · Business metrics · Arabic / English interfaces · Client
+              deliverables
+            </p>
+          </section>
+        </div>
+
+        <section style="margin-top: 9mm">
+          <h2 class="sec">Language Proficiency</h2>
+          <div class="proficiency">
+            <strong>Arabic</strong>
+            <div class="bar"><span style="width: 100%"></span></div>
+          </div>
+          <div class="proficiency">
+            <strong>English</strong>
+            <div class="bar"><span style="width: 78%"></span></div>
+          </div>
+        </section>
+      </div>
+      <div class="page-foot">
+        <span>Abd Alrahman Ahmed Mousa Mohamed — Technical Skills</span>
+        <span>2 / 2</span>
       </div>
     </section>
   </body>
