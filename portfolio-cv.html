@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Abd Alrahman Ahmed Mousa Mohamed — Portfolio</title>
+    <title>Abd Alrahman Ahmed Mousa Mohamed — CV</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -14,22 +14,19 @@
         size: A4;
         margin: 0;
       }
-
       * {
         box-sizing: border-box;
       }
-
       html,
       body {
         margin: 0;
         padding: 0;
-        background: #f7f3ec;
-        color: #1c1916;
-        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+        background: #fff;
+        color: #1a1a1a;
+        font-family: "Source Sans 3", "Segoe UI", sans-serif;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
-
       .page {
         width: 210mm;
         height: 297mm;
@@ -37,562 +34,450 @@
         break-after: page;
         position: relative;
         overflow: hidden;
-        background: #f7f3ec;
+        background: #fff;
       }
-
       .page:last-child {
         page-break-after: auto;
-        break-after: auto;
       }
-
       .page-inner {
-        padding: 14mm 16mm 16mm;
+        padding: 12mm 14mm 14mm;
         height: 100%;
       }
-
       h1,
       h2,
       h3 {
-        font-family: "Cormorant Garamond", Georgia, serif;
-        font-weight: 600;
+        font-family: "Libre Baskerville", Georgia, serif;
         margin: 0;
-        color: #161310;
+        color: #111;
       }
-
-      .accent {
-        color: #8a6a3d;
-      }
-
-      /* ===== Cover ===== */
-      .cover-page {
-        display: grid;
-        grid-template-columns: 78mm 1fr;
-        height: 100%;
-      }
-
-      .cover-side {
-        background: #1c1916;
-        color: #f4efe8;
-        padding: 16mm 12mm;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .cover-side .mark {
-        font-size: 8.5pt;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: #c9a86c;
-        margin-bottom: 14mm;
-        font-weight: 500;
-      }
-
-      .photo-wrap {
-        width: 100%;
-        height: 95mm;
-        overflow: hidden;
-        border: 1px solid rgba(201, 168, 108, 0.35);
-        background: #2a2520;
-      }
-
-      .photo-wrap img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top center;
-        display: block;
-      }
-
-      .side-meta {
-        margin-top: auto;
-        padding-top: 10mm;
-        border-top: 1px solid rgba(244, 239, 232, 0.15);
-        font-size: 9pt;
-        line-height: 1.7;
-        color: #c4b8a8;
-      }
-
-      .side-meta strong {
-        display: block;
-        color: #c9a86c;
-        font-size: 8pt;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        font-weight: 600;
-        margin-bottom: 2px;
-      }
-
-      .cover-main {
-        padding: 18mm 14mm 16mm 14mm;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .cover-main .kicker {
-        font-size: 9pt;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: #8a6a3d;
-        font-weight: 600;
-        margin-bottom: 8px;
-      }
-
-      .cover-main .name {
-        font-size: 26pt;
-        line-height: 1.1;
-        font-weight: 600;
-        margin-bottom: 8px;
-      }
-
-      .cover-main .role {
-        font-size: 12pt;
-        color: #5c5348;
-        margin: 0 0 10mm;
-        padding-bottom: 6mm;
-        border-bottom: 1px solid #ddd2c0;
-      }
-
-      .info-grid {
-        display: grid;
-        gap: 0;
-        margin-bottom: 8mm;
-      }
-
-      .info-row {
-        display: grid;
-        grid-template-columns: 34mm 1fr;
-        gap: 4mm;
-        padding: 5.5px 0;
-        border-bottom: 1px solid #e8dfd0;
-        font-size: 10pt;
-      }
-
-      .info-row .label {
-        color: #8a6a3d;
-        font-weight: 600;
-        font-size: 9pt;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-      }
-
-      .info-row .value {
-        color: #241f1a;
-      }
-
-      .summary {
-        margin-top: auto;
-        padding: 4.5mm 5mm;
-        background: #efe8db;
-        border-left: 3px solid #c9a86c;
-        font-size: 10pt;
-        line-height: 1.55;
-        color: #3f3830;
-      }
-
-      .projects-mini {
-        margin-top: 7mm;
-      }
-
-      .projects-mini h2 {
-        font-size: 13pt;
-        margin-bottom: 4mm;
-      }
-
-      .mini-card {
-        padding: 3.5mm 4mm;
-        margin-bottom: 3mm;
-        background: #fffdf9;
-        border: 1px solid #e4d9c8;
-      }
-
-      .mini-card h3 {
-        font-family: "IBM Plex Sans", sans-serif;
-        font-size: 10pt;
-        font-weight: 600;
-        margin-bottom: 2px;
-      }
-
-      .mini-card p {
-        margin: 0;
-        font-size: 9pt;
-        color: #5c5348;
-        line-height: 1.4;
-      }
-
-      /* ===== Content pages ===== */
-      .topbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        margin-bottom: 3mm;
-      }
-
-      .eyebrow {
-        color: #8a6a3d;
-        font-size: 8.5pt;
-        font-weight: 600;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        margin: 0;
-      }
-
-      .page-no {
-        font-size: 8.5pt;
-        color: #8a8175;
-      }
-
-      .gold-line {
-        height: 1.5px;
-        background: linear-gradient(90deg, #c9a86c, transparent 80%);
-        border: 0;
-        margin: 0 0 6mm;
-      }
-
-      .page-title {
-        font-size: 22pt;
-        line-height: 1.1;
+      .sec {
+        font-family: "Libre Baskerville", Georgia, serif;
+        font-size: 12.5pt;
+        font-weight: 700;
+        color: #1e3a5f;
         margin: 0 0 3mm;
+        padding-bottom: 1.5mm;
+        border-bottom: 1.5px solid #1e3a5f;
+        letter-spacing: 0.02em;
       }
-
-      .lead {
-        margin: 0 0 5mm;
-        font-size: 10.5pt;
-        line-height: 1.55;
-        color: #4a433a;
-        max-width: 170mm;
+      .top {
+        display: grid;
+        grid-template-columns: 42mm 1fr;
+        gap: 7mm;
+        margin-bottom: 5mm;
+        align-items: start;
       }
-
-      .shot {
-        width: 100%;
-        max-height: 92mm;
+      .photo {
+        width: 42mm;
+        height: 52mm;
         object-fit: cover;
         object-position: top center;
-        border: 1px solid #e0d5c4;
-        margin: 0 0 5mm;
-        background: #fff;
-        box-shadow: 0 2px 10px rgba(28, 25, 22, 0.06);
+        border: 1px solid #d0d7e2;
+        display: block;
       }
-
-      .shot.tall {
-        max-height: 150mm;
-        object-fit: contain;
-        background: #fff;
+      .name {
+        font-size: 20pt;
+        line-height: 1.15;
+        margin-bottom: 2mm;
       }
-
-      .two-col {
+      .title {
+        font-size: 11pt;
+        color: #1e3a5f;
+        font-weight: 600;
+        margin-bottom: 3mm;
+      }
+      .contacts {
+        font-size: 9pt;
+        color: #444;
+        line-height: 1.55;
+      }
+      .contacts span {
+        display: inline-block;
+        margin-right: 3.5mm;
+      }
+      .profile {
+        margin: 0 0 4.5mm;
+        font-size: 9.5pt;
+        line-height: 1.5;
+        color: #333;
+        text-align: justify;
+      }
+      .two {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 5mm;
+        gap: 6mm;
       }
-
-      .panel {
-        background: #fffdf9;
-        border: 1px solid #e4d9c8;
-        padding: 4.5mm 5mm;
+      .skill-block {
+        margin-bottom: 3.5mm;
       }
-
-      .section-label {
-        font-family: "Cormorant Garamond", Georgia, serif;
-        font-size: 13pt;
-        margin: 0 0 3mm;
-        color: #161310;
-      }
-
-      ul.clean {
-        margin: 0;
-        padding-left: 14px;
-        color: #4a433a;
+      .skill-block h3 {
+        font-family: "Source Sans 3", sans-serif;
         font-size: 9.5pt;
+        font-weight: 700;
+        color: #1e3a5f;
+        margin-bottom: 1.5mm;
+      }
+      .skill-block p {
+        margin: 0;
+        font-size: 9pt;
+        color: #333;
         line-height: 1.45;
       }
-
-      ul.clean li {
-        margin-bottom: 2.5px;
-      }
-
       .tag {
         display: inline-block;
-        padding: 2.5px 7px;
-        margin: 0 3px 4px 0;
-        border: 1px solid #ddcfb8;
-        background: #efe8db;
-        color: #5a4630;
+        padding: 1.5px 6px;
+        margin: 0 2px 3px 0;
+        border: 1px solid #c9d3e0;
+        background: #f3f6fa;
+        color: #243b53;
         font-size: 8pt;
         font-weight: 600;
       }
-
-      .pipeline {
-        counter-reset: step;
-        list-style: none;
-        margin: 0;
-        padding: 0;
+      .job {
+        margin-bottom: 4mm;
       }
-
-      .pipeline li {
-        counter-increment: step;
-        position: relative;
-        padding: 3.5mm 4mm 3.5mm 11mm;
-        margin-bottom: 2.5mm;
-        background: #fffdf9;
-        border: 1px solid #e4d9c8;
-        font-size: 9.5pt;
-        color: #4a433a;
+      .job-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 4mm;
+        align-items: baseline;
+        margin-bottom: 1mm;
+      }
+      .job-head h3 {
+        font-family: "Source Sans 3", sans-serif;
+        font-size: 10.5pt;
+        font-weight: 700;
+      }
+      .job-meta {
+        font-size: 8.5pt;
+        color: #1e3a5f;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .job-role {
+        font-size: 9pt;
+        color: #555;
+        margin-bottom: 1.5mm;
+        font-weight: 600;
+      }
+      .job ul {
+        margin: 0;
+        padding-left: 4mm;
+        font-size: 9pt;
+        color: #333;
         line-height: 1.4;
       }
-
-      .pipeline li::before {
-        content: counter(step);
-        position: absolute;
-        left: 3mm;
-        top: 3.5mm;
-        width: 5.5mm;
-        height: 5.5mm;
-        background: #1c1916;
-        color: #c9a86c;
-        font-size: 8.5pt;
+      .job li {
+        margin-bottom: 1mm;
+      }
+      .edu-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 9.5pt;
+        margin-bottom: 1.5mm;
+      }
+      .edu-row strong {
         font-weight: 700;
-        display: grid;
-        place-items: center;
       }
-
-      .pipeline strong {
-        color: #161310;
+      .muted {
+        color: #555;
       }
-
-      .report-thumbs {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 3.5mm;
-        margin-top: 4mm;
-      }
-
-      .report-thumbs figure {
-        margin: 0;
-        background: #fff;
-        border: 1px solid #e4d9c8;
-        overflow: hidden;
-      }
-
-      .report-thumbs img {
+      .shot {
         width: 100%;
-        height: 55mm;
+        max-height: 78mm;
         object-fit: cover;
         object-position: top center;
+        border: 1px solid #d0d7e2;
+        margin: 2mm 0 3.5mm;
         display: block;
       }
-
-      .report-thumbs figcaption {
-        padding: 2mm 2.5mm;
-        font-size: 8pt;
-        color: #6b6155;
-        border-top: 1px solid #ebe2d4;
-        text-align: center;
+      .thumbs {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3mm;
+        margin: 2mm 0 3mm;
       }
-
-      .closing {
-        margin-top: 6mm;
-        padding: 5mm 6mm;
-        background: #1c1916;
-        color: #f4efe8;
+      .thumbs img {
+        width: 100%;
+        height: 48mm;
+        object-fit: cover;
+        object-position: top center;
+        border: 1px solid #d0d7e2;
+        display: block;
+        background: #111;
       }
-
-      .closing h2 {
-        color: #c9a86c;
-        font-size: 14pt;
-        margin-bottom: 3mm;
-      }
-
-      .closing p {
-        margin: 0;
-        font-size: 10pt;
-        line-height: 1.55;
-        color: #d8cfc2;
-      }
-
-      .closing strong {
-        color: #f4efe8;
-      }
-
       .page-foot {
         position: absolute;
-        left: 16mm;
-        right: 16mm;
-        bottom: 8mm;
+        left: 14mm;
+        right: 14mm;
+        bottom: 7mm;
         display: flex;
         justify-content: space-between;
         font-size: 8pt;
-        color: #8a8175;
-        border-top: 1px solid #e4d9c8;
-        padding-top: 2.5mm;
+        color: #777;
+        border-top: 1px solid #e5e9ef;
+        padding-top: 2mm;
       }
-
-      .cover-page .page-foot {
-        left: 90mm;
-        border-top-color: #e4d9c8;
+      .lead {
+        font-size: 9.5pt;
+        color: #444;
+        line-height: 1.45;
+        margin: 0 0 3mm;
+      }
+      .panel {
+        border: 1px solid #d8dee6;
+        background: #f8fafc;
+        padding: 3mm 3.5mm;
+      }
+      .panel h3 {
+        font-family: "Source Sans 3", sans-serif;
+        font-size: 9.5pt;
+        font-weight: 700;
+        color: #1e3a5f;
+        margin-bottom: 1.5mm;
+      }
+      .panel ul {
+        margin: 0;
+        padding-left: 4mm;
+        font-size: 8.5pt;
+        color: #333;
+        line-height: 1.4;
       }
     </style>
   </head>
   <body>
-    <!-- PAGE 1 — Cover -->
+    <!-- PAGE 1: CV Summary -->
     <section class="page">
-      <div class="cover-page">
-        <aside class="cover-side">
-          <p class="mark">Portfolio</p>
-          <div class="photo-wrap">
-            <img src="assets/images/profile.png" alt="Abd Alrahman Ahmed Mousa Mohamed" />
-          </div>
-          <div class="side-meta">
-            <strong>Contact</strong>
-            01029646085<br />
-            abdalrahmanahmedmousa@gmail.com<br />
-            github.com/engboda6
-          </div>
-        </aside>
-        <div class="cover-main">
-          <p class="kicker">Computer Science</p>
-          <h1 class="name">Abd Alrahman Ahmed<br />Mousa Mohamed</h1>
-          <p class="role">Software Developer · Age 22</p>
-
-          <div class="info-grid">
-            <div class="info-row">
-              <span class="label">Phone</span>
-              <span class="value">01029646085</span>
+      <div class="page-inner">
+        <div class="top">
+          <img class="photo" src="assets/images/profile.png" alt="Abd Alrahman Ahmed" />
+          <div>
+            <h1 class="name">Abd Alrahman Ahmed Mousa Mohamed</h1>
+            <p class="title">Computer Science · Software &amp; Data Developer</p>
+            <div class="contacts">
+              <span>01029646085</span>
+              <span>abdalrahmanahmedmousa@gmail.com</span><br />
+              <span>github.com/engboda6</span>
+              <span>engboda6.github.io/portfolio</span><br />
+              <span>Born 6/6/2004 · Age 22 · Egypt</span>
             </div>
-            <div class="info-row">
-              <span class="label">Born</span>
-              <span class="value">6 / 6 / 2004</span>
-            </div>
-            <div class="info-row">
-              <span class="label">Education</span>
-              <span class="value">Computer Science</span>
-            </div>
-            <div class="info-row">
-              <span class="label">GitHub</span>
-              <span class="value">github.com/engboda6</span>
-            </div>
-            <div class="info-row">
-              <span class="label">Website</span>
-              <span class="value">engboda6.github.io/portfolio</span>
-            </div>
-          </div>
-
-          <div class="projects-mini">
-            <h2>Selected work</h2>
-            <div class="mini-card">
-              <h3>1. Cosmic Observer</h3>
-              <p>Windows astronomy desktop app — 3D sky, NASA data, AI tutor.</p>
-            </div>
-            <div class="mini-card">
-              <h3>2. Vertical Farm Analysis</h3>
-              <p>Python pipeline — telemetry to charts and PDF report.</p>
-            </div>
-          </div>
-
-          <div class="summary">
-            I build desktop applications and data pipelines with real deliverables: demos,
-            screenshots, and client-ready reports.
           </div>
         </div>
+
+        <h2 class="sec">Professional Profile</h2>
+        <p class="profile">
+          Computer Science student and software developer building end-to-end desktop applications
+          and data analysis systems. Experience spanning JavaScript (React, Electron, Three.js),
+          Python data pipelines, Excel/CSV analytics, and client-ready PDF reporting. Delivers
+          working software with demos, screenshots, and professional documentation—not slides alone.
+        </p>
+
+        <h2 class="sec">Education</h2>
+        <div class="edu-row">
+          <div>
+            <strong>Computer Science</strong>
+            <span class="muted"> — Faculty of Computers &amp; Information</span>
+          </div>
+          <span class="muted">Ongoing</span>
+        </div>
+
+        <h2 class="sec" style="margin-top: 4mm">Technical Skills</h2>
+        <div class="two">
+          <div>
+            <div class="skill-block">
+              <h3>Programming Languages</h3>
+              <p>
+                <span class="tag">JavaScript (JSX)</span>
+                <span class="tag">Python</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">SQL</span>
+                <span class="tag">GLSL</span>
+                <span class="tag">PowerShell</span>
+              </p>
+            </div>
+            <div class="skill-block">
+              <h3>Frontend &amp; Desktop</h3>
+              <p>
+                <span class="tag">React 18</span>
+                <span class="tag">Three.js</span>
+                <span class="tag">Vite</span>
+                <span class="tag">Electron 33</span>
+                <span class="tag">electron-builder</span>
+                <span class="tag">SVG</span>
+              </p>
+            </div>
+            <div class="skill-block">
+              <h3>Backend &amp; APIs</h3>
+              <p>
+                <span class="tag">Node.js</span>
+                <span class="tag">Express</span>
+                <span class="tag">REST APIs</span>
+                <span class="tag">OpenAI SDK</span>
+                <span class="tag">cors / dotenv</span>
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="skill-block">
+              <h3>Data &amp; Analytics</h3>
+              <p>
+                <span class="tag">pandas</span>
+                <span class="tag">numpy</span>
+                <span class="tag">matplotlib</span>
+                <span class="tag">openpyxl</span>
+                <span class="tag">PyMuPDF</span>
+                <span class="tag">Excel / CSV</span>
+              </p>
+            </div>
+            <div class="skill-block">
+              <h3>Tools &amp; Delivery</h3>
+              <p>
+                <span class="tag">Git / GitHub</span>
+                <span class="tag">Chrome Headless PDF</span>
+                <span class="tag">Windows packaging (.exe)</span>
+                <span class="tag">Client PDF reports</span>
+              </p>
+            </div>
+            <div class="skill-block">
+              <h3>Domain Skills</h3>
+              <p>
+                Desktop app development · 3D visualization · Data cleaning &amp; aggregation ·
+                Business loyalty metrics · Technical reporting · Bilingual UI (Arabic / English)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="sec" style="margin-top: 2mm">Languages</h2>
+        <p style="margin: 0; font-size: 9.5pt">
+          <strong>Arabic</strong> — Native &nbsp;·&nbsp; <strong>English</strong> — Professional working
+          proficiency
+        </p>
       </div>
       <div class="page-foot">
-        <span>Abd Alrahman Ahmed Mousa Mohamed</span>
+        <span>Abd Alrahman Ahmed Mousa Mohamed — CV</span>
         <span>1 / 5</span>
       </div>
     </section>
 
-    <!-- PAGE 2 -->
+    <!-- PAGE 2: Experience -->
     <section class="page">
       <div class="page-inner">
-        <div class="topbar">
-          <p class="eyebrow">Project 01</p>
-          <span class="page-no">2 / 5</span>
+        <h2 class="sec">Experience &amp; Projects</h2>
+
+        <div class="job">
+          <div class="job-head">
+            <h3>Cosmic Observer — Desktop Astronomy App</h3>
+            <span class="job-meta">2025–2026</span>
+          </div>
+          <p class="job-role">Full-Stack Desktop Developer · Solo project</p>
+          <ul>
+            <li>
+              Built a Windows desktop astronomy observatory with React, Three.js, Node.js/Express,
+              and Electron; shipped NSIS installer and portable <code>.exe</code>.
+            </li>
+            <li>
+              Implemented live 3D sky rendering, NEO/debris tracking, sky events, and an optional
+              OpenAI astronomy tutor.
+            </li>
+            <li>
+              Integrated real data sources: NASA NeoWs, JPL, CelesTrak TLE, VizieR/CDS; used
+              astronomy-engine for celestial calculations.
+            </li>
+            <li>
+              Delivered bilingual Arabic/English UI and published the open-source repository on
+              GitHub.
+            </li>
+          </ul>
         </div>
-        <hr class="gold-line" />
-        <h1 class="page-title">Cosmic Observer</h1>
-        <p class="lead">
-          Windows desktop astronomy app with interactive 3D sky, NEO tracking, orbital debris,
-          dark-matter research views, and an AI tutor — shipped as a native <strong>.exe</strong>.
+
+        <div class="job">
+          <div class="job-head">
+            <h3>Vertical Farm Telemetry Analysis</h3>
+            <span class="job-meta">2026</span>
+          </div>
+          <p class="job-role">Data Analyst / Python Developer · Solo project</p>
+          <ul>
+            <li>
+              Designed a pure-Python pipeline over 600 production telemetry rows for a vertical farm.
+            </li>
+            <li>
+              Built nutrient-decay analysis across 60 irrigation channels, harvest-weight indices,
+              and optimal feeding balances.
+            </li>
+            <li>
+              Produced charts (EC, heatmap, harvest index), Excel exports, and a 3-page client PDF
+              report (Abd Alrahman Ahmed).
+            </li>
+            <li>Stack: Python, pandas, numpy, matplotlib, openpyxl.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <h3>Home Repair Loyalty Analysis</h3>
+            <span class="job-meta">2026</span>
+          </div>
+          <p class="job-role">Data Analyst · Marketing analytics · Solo project</p>
+          <ul>
+            <li>
+              Analyzed 2,000 marketing records (Jan–Apr 2024) from <code>Data.xlsx</code> for a
+              home-repair business (~$1.56M revenue, 3.02x ROAS, 49.4% returning customers).
+            </li>
+            <li>
+              Measured loyalty by channel, region, and service type; identified Email retention
+              leadership and Referral × Premium as the strongest loyalty pair.
+            </li>
+            <li>
+              Recommended post-service surveys and tiered bundles (Care Plus, Premium Shield,
+              Seasonal Autopilot).
+            </li>
+            <li>
+              Delivered a dark 5-page client PDF with SVG charts — authored Eng: Abd Alrahman Ahmed.
+            </li>
+          </ul>
+        </div>
+
+        <h2 class="sec" style="margin-top: 3mm">Core Competencies</h2>
+        <p style="margin: 0; font-size: 9pt; line-height: 1.55; color: #333">
+          End-to-end product delivery · Desktop packaging for Windows · Data cleaning &amp; KPI
+          analysis · API integration · 3D / interactive visualization · Client reporting (HTML +
+          PDF) · Problem framing from business briefs · Clear technical documentation
         </p>
-        <img class="shot" src="assets/images/astronomy/home.png" alt="Cosmic Observer" />
-        <div class="two-col">
-          <div class="panel">
-            <h2 class="section-label">Capabilities</h2>
-            <ul class="clean">
-              <li>Live 3D sky from GPS or manual location</li>
-              <li>Satellites, planets, and bright stars</li>
-              <li>Sun / Moon status and sky events</li>
-              <li>Modules: Sky, Events, NEO, Sats, Dark, Guide</li>
-              <li>Arabic + English interface</li>
-            </ul>
-          </div>
-          <div class="panel">
-            <h2 class="section-label">Links</h2>
-            <ul class="clean">
-              <li>github.com/engboda6/cosmic-observer</li>
-              <li>License: MIT</li>
-              <li>Platform: Windows (.exe)</li>
-              <li>Demo video on portfolio site</li>
-            </ul>
-          </div>
-        </div>
       </div>
       <div class="page-foot">
-        <span>Cosmic Observer</span>
+        <span>Experience &amp; Projects</span>
         <span>2 / 5</span>
       </div>
     </section>
 
-    <!-- PAGE 3 -->
+    <!-- PAGE 3: Cosmic Observer -->
     <section class="page">
       <div class="page-inner">
-        <div class="topbar">
-          <p class="eyebrow">Project 01 · Technical</p>
-          <span class="page-no">3 / 5</span>
-        </div>
-        <hr class="gold-line" />
-        <h1 class="page-title">Stack &amp; Features</h1>
+        <h2 class="sec">Project Highlight — Cosmic Observer</h2>
         <p class="lead">
-          JavaScript end to end — React + Three.js for the sky, Node.js/Express for APIs, Electron
-          for the Windows desktop shell.
+          Windows astronomy desktop app: interactive 3D sky, NEO tracking, orbital debris,
+          dark-matter research views, and AI tutor. GitHub: github.com/engboda6/cosmic-observer
         </p>
-        <p style="margin: 0 0 5mm">
-          <span class="tag">JavaScript</span>
-          <span class="tag">React 18</span>
-          <span class="tag">Three.js</span>
-          <span class="tag">Vite</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">Express</span>
-          <span class="tag">astronomy-engine</span>
-          <span class="tag">OpenAI</span>
-          <span class="tag">Electron 33</span>
-          <span class="tag">GLSL</span>
-        </p>
-        <div class="two-col">
+        <img class="shot" src="assets/images/astronomy/home.png" alt="Cosmic Observer" />
+        <div class="two">
           <div class="panel">
-            <h2 class="section-label">Features</h2>
-            <ul class="clean">
-              <li>Interactive 3D celestial sphere</li>
-              <li>Sunrise / sunset and moon phases</li>
-              <li>NASA NeoWs near-Earth objects</li>
-              <li>CelesTrak debris / TLE tracking</li>
-              <li>Dark-matter lensing research views</li>
-              <li>Optional OpenAI astronomy tutor</li>
+            <h3>Stack used</h3>
+            <ul>
+              <li>JavaScript / JSX, HTML, CSS, GLSL, PowerShell</li>
+              <li>React 18, Three.js, Vite</li>
+              <li>Node.js, Express, astronomy-engine</li>
+              <li>OpenAI SDK, Electron 33, electron-builder</li>
             </ul>
           </div>
           <div class="panel">
-            <h2 class="section-label">Data sources</h2>
-            <ul class="clean">
-              <li>NASA NeoWs</li>
-              <li>JPL Sentry / CAD</li>
-              <li>NASA CNEOS Fireball</li>
-              <li>CelesTrak (TLE)</li>
-              <li>VizieR / CDS</li>
-            </ul>
-            <h2 class="section-label" style="margin-top: 4mm">Structure</h2>
-            <ul class="clean">
-              <li><code>electron/</code> — desktop shell</li>
-              <li><code>server/</code> — local APIs</li>
-              <li><code>src/</code> — React + Three.js</li>
+            <h3>Capabilities</h3>
+            <ul>
+              <li>Live 3D sky from GPS / manual location</li>
+              <li>NASA / JPL / CelesTrak live feeds</li>
+              <li>Sky events, satellites, planets, stars</li>
+              <li>Bilingual Arabic + English interface</li>
             </ul>
           </div>
         </div>
@@ -603,105 +488,97 @@
       </div>
     </section>
 
-    <!-- PAGE 4 -->
+    <!-- PAGE 4: Farm + Home Repair -->
     <section class="page">
       <div class="page-inner">
-        <div class="topbar">
-          <p class="eyebrow">Project 02</p>
-          <span class="page-no">4 / 5</span>
-        </div>
-        <hr class="gold-line" />
-        <h1 class="page-title">Vertical Farm Analysis</h1>
+        <h2 class="sec">Project Highlight — Vertical Farm Analysis</h2>
         <p class="lead">
-          Pure Python pipeline for 600 telemetry rows. Report prepared by
-          <strong>Abd Alrahman Ahmed</strong>.
+          Python-only pipeline: raw farm CSV → clean dataset, 60-channel analysis, charts, Excel, and
+          a 3-page PDF prepared by Abd Alrahman Ahmed.
         </p>
-        <ol class="pipeline">
-          <li>
-            <strong>prepare_dataset.py</strong> — clean CSV and parse Stack / Rack / Row IDs
-          </li>
-          <li>
-            <strong>analysis.py</strong> — decay matrix for 60 channels, harvest index, feeding
-            balances
-          </li>
-          <li>
-            <strong>charts.py</strong> — EC distribution, heatmap, harvest charts
-          </li>
-          <li>
-            <strong>report.py</strong> — three-page PDF for delivery
-          </li>
-          <li>
-            <strong>run_pipeline.py</strong> — full run in one command
-          </li>
-        </ol>
-        <div class="report-thumbs">
-          <figure>
-            <img src="assets/images/data-analysis/report-page1.png" alt="Report page 1" />
-            <figcaption>Page 1 — Summary</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/images/data-analysis/report-page2.png" alt="Report page 2" />
-            <figcaption>Page 2 — Matrix</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/images/data-analysis/report-page3.png" alt="Report page 3" />
-            <figcaption>Page 3 — Harvest</figcaption>
-          </figure>
+        <div class="thumbs" style="grid-template-columns: 1fr 1fr 1fr; margin-bottom: 5mm">
+          <img src="assets/images/data-analysis/report-page1.png" alt="Farm report 1" />
+          <img src="assets/images/data-analysis/report-page2.png" alt="Farm report 2" />
+          <img src="assets/images/data-analysis/report-page3.png" alt="Farm report 3" />
         </div>
+        <p style="margin: 0 0 5mm; font-size: 9pt; color: #333">
+          <strong>Languages / libraries:</strong> Python, pandas, numpy, matplotlib, openpyxl
+        </p>
+
+        <h2 class="sec">Project Highlight — Home Repair Loyalty</h2>
+        <p class="lead">
+          Loyalty analysis from 2,000 marketing rows: surveys + Standard / Seasonal / Premium
+          bundles. Dark 5-page client PDF — Eng: Abd Alrahman Ahmed.
+        </p>
+        <div class="thumbs" style="grid-template-columns: 1fr 1fr 1fr 1fr 1fr">
+          <img src="assets/images/home-repair/page-01.png" alt="Loyalty 1" />
+          <img src="assets/images/home-repair/page-02.png" alt="Loyalty 2" />
+          <img src="assets/images/home-repair/page-03.png" alt="Loyalty 3" />
+          <img src="assets/images/home-repair/page-04.png" alt="Loyalty 4" />
+          <img src="assets/images/home-repair/page-05.png" alt="Loyalty 5" />
+        </div>
+        <p style="margin: 2mm 0 0; font-size: 9pt; color: #333">
+          <strong>Stack:</strong> Python, openpyxl, PyMuPDF, HTML / CSS / SVG, Chrome Headless PDF
+        </p>
       </div>
       <div class="page-foot">
-        <span>Vertical Farm Telemetry Analysis</span>
+        <span>Data projects</span>
         <span>4 / 5</span>
       </div>
     </section>
 
-    <!-- PAGE 5 -->
+    <!-- PAGE 5: Skills matrix + contact -->
     <section class="page">
       <div class="page-inner">
-        <div class="topbar">
-          <p class="eyebrow">Project 02 · Delivery</p>
-          <span class="page-no">5 / 5</span>
-        </div>
-        <hr class="gold-line" />
-        <h1 class="page-title">Libraries &amp; Contact</h1>
-        <p class="lead">
-          Raw farm CSV becomes a clean dataset, analysis tables, charts, Excel files, and a
-          three-page report.
-        </p>
-        <div class="two-col">
-          <div class="panel">
-            <h2 class="section-label">Libraries</h2>
-            <ul class="clean">
-              <li><strong>pandas</strong> — cleaning &amp; aggregation</li>
-              <li><strong>numpy</strong> — calculations</li>
-              <li><strong>matplotlib</strong> — charts &amp; PDF figures</li>
-              <li><strong>openpyxl</strong> — Excel export</li>
-            </ul>
-          </div>
-          <div class="panel">
-            <h2 class="section-label">Deliverables</h2>
-            <ul class="clean">
-              <li>Clean structured dataset</li>
-              <li>Analysis for 60 irrigation channels</li>
-              <li>Charts and Excel workbooks</li>
-              <li>Three-page nutrient PDF</li>
-            </ul>
-          </div>
-        </div>
-        <div class="closing">
-          <h2>Contact</h2>
+        <h2 class="sec">Skills Summary by Category</h2>
+        <div class="skill-block">
+          <h3>Languages I write in</h3>
           <p>
-            <strong>Abd Alrahman Ahmed Mousa Mohamed</strong><br />
-            Computer Science · Age 22 · Born 6/6/2004<br />
-            Phone: 01029646085<br />
-            Email: abdalrahmanahmedmousa@gmail.com<br />
-            GitHub: github.com/engboda6<br />
-            Portfolio: engboda6.github.io/portfolio
+            JavaScript (primary for desktop/web UI) · Python (primary for data &amp; reporting) ·
+            HTML / CSS · SQL · GLSL (shaders) · PowerShell (Windows automation)
           </p>
         </div>
+        <div class="skill-block">
+          <h3>Frameworks &amp; libraries</h3>
+          <p>
+            React · Three.js · Vite · Electron · Node.js / Express · pandas · numpy · matplotlib ·
+            openpyxl · astronomy-engine · OpenAI SDK
+          </p>
+        </div>
+        <div class="skill-block">
+          <h3>What I deliver for clients</h3>
+          <p>
+            Runnable Windows apps · Analysis notebooks/pipelines · Excel outputs · Professional PDF
+            reports · Live demos &amp; screenshots · GitHub repositories · Portfolio documentation
+          </p>
+        </div>
+
+        <h2 class="sec" style="margin-top: 5mm">Selected Links</h2>
+        <p style="margin: 0 0 2mm; font-size: 9.5pt; line-height: 1.6">
+          Portfolio website: <strong>engboda6.github.io/portfolio</strong><br />
+          Cosmic Observer repo: <strong>github.com/engboda6/cosmic-observer</strong><br />
+          GitHub profile: <strong>github.com/engboda6</strong>
+        </p>
+
+        <h2 class="sec" style="margin-top: 5mm">Contact</h2>
+        <div class="panel" style="background: #1e3a5f; border-color: #1e3a5f; color: #fff">
+          <h3 style="color: #fff">Abd Alrahman Ahmed Mousa Mohamed</h3>
+          <ul style="color: #e8eef8; list-style: none; padding-left: 0">
+            <li>Computer Science · Age 22 · Born 6/6/2004</li>
+            <li>Phone: 01029646085</li>
+            <li>Email: abdalrahmanahmedmousa@gmail.com</li>
+            <li>GitHub: github.com/engboda6</li>
+            <li>Portfolio: engboda6.github.io/portfolio</li>
+          </ul>
+        </div>
+
+        <p style="margin-top: 6mm; font-size: 9pt; color: #555; line-height: 1.5">
+          Available for software development, data analysis, and reporting engagements. Portfolio
+          site includes project pages, screenshots, demo video, and downloadable reports.
+        </p>
       </div>
       <div class="page-foot">
-        <span>Abd Alrahman Ahmed Mousa Mohamed</span>
+        <span>Abd Alrahman Ahmed Mousa Mohamed — CV</span>
         <span>5 / 5</span>
       </div>
     </section>
